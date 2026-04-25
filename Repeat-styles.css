@@ -84,6 +84,56 @@
     transition: all 1s;
     color: skyblue;
 }
-
+footer{
+    background-color: #171819;
+    height: 100px;
+}
+.news{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    height: 60px;
+    position: absolute;
+    top: 1400px;
+    left: 680px;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+.news > h4{
+    display: inline-block;
+    color: aliceblue;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    margin-left: 260px;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+}
+.email{
+    padding: 10px 60px 10px 16px;
+    background-color: whitesmoke;
+    color: grey;
+    border: 0.5px solid dodgerblue;
+    border-radius: 44px;
+}
+.submit{
+    background-color: dodgerblue;
+    color: whitesmoke;
+    display:flex;
+    align-items: center;
+    margin-left: -34px;
+    border-radius: 44px;
+    padding: 0px 40px 0px 40px;
+}
 
 
