@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: oldlace;
+}
+header{
+    position: sticky;
+    top: 0px;
+    max-height: 380px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: ivory  ;
+    min-height: 120px;
+    border-radius: 6px;
+    gap: 12px;
+    justify-content: space-around;
+    opacity: 0.6;
+}
+.header:hover{
+    opacity: 1;
+    background-color: aquamarine;
+    box-shadow: 2px 2px 40px blue;
+    border-radius: 24px;
+    transition: all 2s;
+}
+a{
+    text-decoration: none;
+}
+h3{
+    color: red;
+    font-size: 22px;
+}
+.about{
+    margin-top: 44px;
+    color: red;
+    font-size: 22px;
+}
+.about:hover{
+    transition: all 1s;
+    text-shadow: 68px 10px 4px rgb(204, 7, 243);
+}
+.news{
+    margin-top: 44px;
+    color: red;
+    font-size: 22px;
+}
+.news:hover{
+    transition: all 1s;
+    text-shadow: 18px 18px 4px rgb(204, 7, 243);
+}
+.event_name{
+    margin-top: 32px;
+}
+.event_name:hover{
+    transition: all 1s;
+    text-shadow: 2px 2px 10px green;
+}
+.contact{
+    margin-top: 44px;
+    color: red;
+    font-size: 22px;
+}
+.contact:hover{
+    transition: all 1s;
+    text-shadow: -18px 18px 4px rgb(204, 7, 243);
+}
+.rating{
+    margin-top: 44px;
+    color: red;
+    font-size: 22px;
+}
+.rating:hover{
+    transition: all 1s;
+    text-shadow: -68px 10px 4px rgb(204, 7, 243);
+}
+
+h2{
+    font-size: 100px;
+    padding: 28px;
+    color: burlywood;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.description > h2 > p{
+    padding: 10px;
+}
+mark{
+    background-color: rgb(40, 113, 62);
+    border-radius: 42px;
+    color: burlywood;
+}
+footer{
+    /* margin-top: 16px; */
+    background-color: rgb(137, 214, 143);
+    height: fit-content;
+    border-top: 4px solid red;
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+.our_parntners{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 44px;
+    margin-top: 4px;
+    border: 2px solid rgb(187 253 192);
+    border-radius: 24px;
+    background-color: rgb(187 253 192);
+}
+.partner{
+    display: flex;
+    flex-direction: row;    
+    border-radius: 140px;
+}
+.partner:hover{
+    transition: all 1s;
+    cursor: pointer;
+    background-color: mintcream;
+}
+.partner > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 18px;
+    padding: 4px;
+}
+.partner > h6{
+    color: rgb(28, 51, 255);
+    font-size: 14px;
+   margin: 16px 0px 0px 8px;
+}
+.our_parntners > h4{
+    padding: 4px;
+    color: green;
+    font-family: ui-rounded;
+}
+.rates{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2c/Foot_Combat_close-up.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 1000px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: end;
+
+}   
+.area_rating{
+    display: grid;  
+    max-width: 800px;
+    max-height: fit-content;
+    gap: 12px;
+    display: grid;
+    margin-top: 180px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+.rate{
+    font-size: 22px;
+    background-color: skyblue;
+    border: 2px solid blue;
+    border-radius: 48px;
+    padding: 16px;
+    margin-right: 60px;
+}
+.rate_special{
+    font-size: 22px;
+    background-color: skyblue;
+    border: 2px solid blue;
+    grid-column: span 2;
+    border-radius: 48px;
+    padding: 16px;
+    max-height: fit-content;
+    max-width: fit-content;
+    margin-right: 60px;
+}
+.unseen{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin: 8px;
+}
+.description{
+    background-image: url(https://hmbfest.ru/wp-content/uploads/2024/04/130723_73-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 18px;
+}
+.activities{
+    background-image: url(https://hmbrussia.ru/storage/gal/75.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 18px;
+}
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+.action{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    margin: 14px;
+    padding: 12px;
+    max-width: 280px;
+}
+.action:hover{
+    transition: all 1s;
+    background-color: antiquewhite;
+    border-radius: 26px;
+}
+.action > h4{
+    color: olive;
+    font-size: 26px;
+}
+.take_a_ride{
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+}
+.take_a_ride > button{
+    background-color: seagreen;
+    border-radius: 24px;
+    border: 4px solid seagreen;
+    font-size: 24px;
+    padding: 6px;
+}
+.take_a_ride > button:hover{
+    transition: all 2s;
+    color: whitesmoke;
+    box-shadow: 6px 6px 40px limegreen;
+    cursor: pointer;
+}
+.stars > img{
+    max-width: 60px;
+    max-height: 40px;
+    margin-bottom: -24px;
+    margin-left: 16px;
+}
+.stars_special{
+    margin-left: 260px;
+}
+.stars_special > img{
+    max-width: 60px;
+    max-height: 40px;
+    margin-bottom: -24px;  
+}
+.our_contacts{
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    gap: 8px;
+    margin-top: 4px;
+    border: 2px solid rgb(187 253 192);
+    border-radius: 24px;
+    background-color: rgb(187 253 192);
+    max-width: 180px;
+}
+.our_contacts > h6{
+    color: brown;
+    font-size: 20px;
+}
+.our_contacts > a > h6{
+    color: rgb(28, 51, 255);
+    font-size: 18px;
+}
