@@ -88,7 +88,7 @@ h2{
     padding: 10px;
 }
 mark{
-    background-color: rgb(40, 113, 62);
+    background-color: rgba(40, 113, 62, 0.6);
     border-radius: 42px;
     color: burlywood;
 }
@@ -115,9 +115,9 @@ footer{
     display: flex;
     flex-direction: row;    
     border-radius: 140px;
+    transition: all 1s;
 }
 .partner:hover{
-    transition: all 1s;
     cursor: pointer;
     background-color: mintcream;
 }
@@ -210,9 +210,9 @@ footer{
     margin: 14px;
     padding: 12px;
     max-width: 280px;
+    transition: all 1s;
 }
 .action:hover{
-    transition: all 1s;
     background-color: antiquewhite;
     border-radius: 26px;
 }
