@@ -33,7 +33,7 @@
 }
 
 .desriptions > h6{
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 440px; 
     margin-left: 280px;
     letter-spacing: 3.7px;
@@ -56,7 +56,7 @@
 }
 .play_menu{
     padding: 14px;
-    border-bottom: 4px solid black;
+    border-bottom: 0.8px solid black;
 }
 .blocks{
     display: flex;
@@ -84,6 +84,7 @@
     transition: all 1s;
     color: skyblue;
 }
+/* Здесь начинаются стили для подвала */
 footer{
     background-color: #171819;
     height: 100px;
@@ -93,9 +94,12 @@ footer{
     flex-direction: row;
     gap: 14px;
     height: 60px;
-    position: absolute;
-    top: 1400px;
-    left: 680px;
+    position: static;
+    margin-left: 560px;
+    padding-top: 24px;
+    /* position: absolute;
+    top: 1800px;
+    left: 680px; */
     width: fit-content;
     align-items: center;
     justify-content: center;
@@ -136,4 +140,235 @@ footer{
     padding: 0px 40px 0px 40px;
 }
 
-
+/* Здесь начинаются стили для основного дива */
+.story{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 280px;
+}
+.story > h2{
+    padding: 14px;
+    margin-top: 40px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #48555B;
+    letter-spacing: 2.64px;
+    margin-left: 6px;
+}
+.border{
+    border-top: 2.4px solid dodgerblue;
+    width: 76px;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+.lorem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 24px;
+    width: 600px;
+    margin-left: -100px;
+    margin-left: 280px;
+}
+.lorem > h2{
+    padding: 10px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #48555B;
+}
+.lorem > h4{
+    padding: 10px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #48555B;
+    line-height: 28px;
+}
+.WE{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    margin-left: -140px;
+}
+.image1{
+    background-image: url(./Source/photo_4_2026-04-26_15-50-46.jpg);
+    background-repeat: no-repeat;
+    width: 180px;
+}
+.image2{
+    background-image: url(./Source/photo_5_2026-04-26_15-50-46.jpg);
+    background-repeat: no-repeat;
+    width: 180px;
+}
+.image3{
+    background-image: url(./Source/photo_6_2026-04-26_15-50-46.jpg);
+    background-repeat: no-repeat;
+    width: 180px;
+}
+.image1 > h2{
+    padding: 16px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+}
+.image2 > h2{
+    padding: 16px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+}
+.image3 > h2{
+    padding: 16px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+}
+.capabilities{
+    margin-left: 280px;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.OUR{
+    padding: 12px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #48555B;
+    letter-spacing: 2.64px;
+}
+.Lor2{
+    padding: 12px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #48555B;
+    width: 540px;
+}
+.Lor2 > h6{
+    font-weight: lighter;
+}
+.Servicies{
+    padding: 10px 48px 10px 48px;
+    font-family: "Abel", sansserif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    background-color: dodgerblue;
+    margin-left: -220px;
+    margin-right: 88px;
+    max-height: 24px;
+}
+.border2{
+    margin-top: 8px;
+    border-top: 2.4px solid dodgerblue;
+    width: 54px;
+}
+.duty{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1200px;
+    margin-top: 80px;
+    margin-left: 460px;
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 0.5px solid grey;
+    padding: 14px;
+    width: 288px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #48555B;
+}
+.projects > img{
+    max-width: 60px;
+    max-height: 120px;
+    padding-bottom: 16px;
+}
+.projects > h2{
+    font-size: 20px;
+    font-weight: lighter;
+    width: 300px;
+}
+.projects > h4{
+    font-family: "Abel", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    color: #48555B;
+    padding: 40px 2px 40px 2px;
+}
+.structure{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    border: 0.5px solid grey;
+    padding: 14px;
+    width: 288px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #48555B;
+}
+.structure > img{
+    max-width: 60px;
+    max-height: 120px;
+    padding-bottom: 16px;
+}
+.structure > h2{
+    font-size: 20px;
+    font-weight: lighter;
+    width: 300px;
+    padding-bottom: 22px;
+}
+.structure > h4{
+    font-family: "Abel", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    color: #48555B;
+}
+.factory{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    border: 0.5px solid grey;
+    padding: 14px;
+    width: 288px;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #48555B;
+}
+.factory > img{
+    max-width: 60px;
+    max-height: 120px;
+    padding-bottom: 16px;
+}
+.factory > h2{
+    font-size: 20px;
+    font-weight: lighter;
+    width: 300px;
+}
+.factory > h4{
+    font-family: "Abel", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    color: #48555B;
+}
