@@ -113,6 +113,9 @@ footer{
     font-size: 24px;
     line-height: 20px;
 }
+.news > h4:hover{
+    cursor: pointer;
+}
 .form{
     display: flex;
     flex-direction: row;
@@ -138,6 +141,9 @@ footer{
     margin-left: -34px;
     border-radius: 44px;
     padding: 0px 40px 0px 40px;
+}
+.submit:hover{
+    cursor: pointer;
 }
 
 /* Здесь начинаются стили для основного дива */
@@ -271,6 +277,9 @@ footer{
     margin-right: 88px;
     max-height: 24px;
 }
+.Servicies:hover{
+    cursor: pointer;
+}
 .border2{
     margin-top: 8px;
     border-top: 2.4px solid dodgerblue;
@@ -371,4 +380,25 @@ footer{
     font-weight: lighter;
     font-style: normal;
     color: #48555B;
+}
+.end_image{
+    background-image:url(./Source/photo_3_2026-04-26_15-50-46.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 199.8vh;
+    height: 440px;
+    margin-top: 240px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.end_image > h2{
+    width: 200px;
+    height: 54px;
+    margin-bottom: 6px;
+}
+.end_image > h2:hover{
+    cursor: pointer;
 }
