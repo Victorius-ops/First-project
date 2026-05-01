@@ -1,0 +1,7 @@
+  body{background-color: cornflowerblue;}
+        h2{color: rgb(173, 2, 2);}
+        a{color: orangered; text-decoration: none;}
+        p{font-size: 32px;}
+        ul{color: rgb(9, 91, 105);font-size: 28px; font-family: Georgia, 'Times New Roman', Times, serif;}
+        ol{color: rgb(98, 32, 160); font-size: 28px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+        span{background-color: aquamarine;}
