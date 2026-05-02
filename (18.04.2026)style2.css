@@ -99,6 +99,35 @@ ul{
 .Previous_work{
     display: flex;
     justify-content: center;
+    padding: 20px;
+}
+.about_me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 20vh;
+    gap: 20px;
+    position: fixed;
+    top: calc(50% - 100px);
+    right: 40px;
+    opacity: 0.4;
+    transition: 2s;
+}
+.about_me:hover{
+    opacity: 1;
+    background-color: azure;
+    border-radius: 40px;
+}
+.contact{
+    padding: 24px;
+    display: inline-block;
+}
+.numbers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 14px;
 }
 @media(max-width: 680px) {
     .Grid{
@@ -114,5 +143,10 @@ ul{
 @media(max-width: 420px) {
         .another_routine{
             display: none;
+        }
+}
+@media(max-widht:420p) {
+        .My_Projects{
+            width: min-content;
         }
 }
