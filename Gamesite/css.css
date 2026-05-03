@@ -264,6 +264,7 @@ font-weight: 800; */
     justify-items: center;
     font-size: 1.8rem;
     padding: 20px;
+    gap: 12px;
 }
 .card{
     display: flex;
@@ -272,36 +273,103 @@ font-weight: 800; */
     border-radius: 100px;
     /* padding: 10px; */
     background-color: #201C3A;
-    width: fit-content;
 }
-.card > img{
+/* .card > img{
     height: 38vh;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
-
-}
+} */
 .Image_1{
-    background-image: url(https://img.freepik.com/free-photo/beautiful-forested-mountains-fog_181624-719.jpg);
+    background-image: url(https://img.freepik.com/premium-photo/hills-fog_78790-5.jpg);
     /* background-size: contain; */
     height: 24vh;
-    width: 60vh;
+    width: 100%;
     background-repeat: no-repeat;
-    border-top-left-radius: 80px;
-    border-top-right-radius: 80px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: end;
+    background-size: 100% 100%;
+}
+.spn_1{
+    display: flex;
+    justify-content: end;
+    color: #FFFFFF;
+    font-size: 1rem;
 }
 .Violet{
-    display: flex;
-    justify-content: center;
-    width: 6vh;
+    margin-top: 28px;
+    margin-right: 28px;
+    text-align: center;
     background-color: #7B6EF6;
+    font-weight: 600;
+    padding: 4px;
+    width: 6vh;
     border-radius: 100px;
-    color: #FFFFFF;
-    margin: 28px;
-    font-size: 1rem;
+}
+.Green{
+    margin-top: 28px;
+    margin-right: 28px;
+    text-align: center;
+    background-color: #00D68F;
+    color: #0E0B1F;
+    font-weight: 600;
+    width: 8vh;
+    border-radius: 100px; 
+    padding: 4px;
+}
+.Orange{
+    margin-top: 28px;
+    margin-right: 28px;
+    text-align: center;
+    background-color: #FF6B35;
+    font-weight: 600;
+    padding: 4px;
+    width: 6vh;
+    border-radius: 100px;
+}
+.spn_2{
+   display: flex;
+   justify-content: start;
+   gap: 8px;
+   padding-inline-start: 40px;
+   padding-block-end: 14px;
+   font-size: 0.8rem;
+   font-weight: 600;
+   color: rgb(182, 177, 233);
+}
+.glass{
+    background-color: rgba(32, 28, 58, 0.2);
+    border-radius: 28px;
+    padding: 4px;
+}
+.Image_2{
+    background-image: url(https://img.freepik.com/free-photo/foggy-forest_198169-143.jpg?w=360);
+    height: 24vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: 100% 100%;
+}
+.Image_3{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtGWvWx_-70cYpabWoCJSjde0Vi-QtjiOvhA&s);
+    height: 24vh;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Card_content1{
+    
 }
 /* Здесь заканчиваются стили для карточек */
 @keyframes pulse {
