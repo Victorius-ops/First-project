@@ -52,7 +52,7 @@ header{
 }
 .actions > a {
     font-family: 'DM Sans', sans-serif;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.6);
     font-size: .9rem;
     font-weight: 400;
     text-decoration: none;
@@ -103,7 +103,7 @@ font-weight: 800; */
     font-size: clamp(2.8rem, 7vw, 5rem);
     font-weight: 800;
     line-height: 1.1;
-    margin: 20px 60px 20px 60px;
+    margin: 60px;
 }
 .bar{
     display: flex;
@@ -241,7 +241,7 @@ font-weight: 800; */
 /* Здесь заканчиваются  стили для карточки Hero */
 /* Здесь начаниаются стили для карточек */
 .Game_cards{
-    margin: 20px 60px 20px 60px;
+    margin: 60px;
 }
 .Presentation{
     display: grid;
@@ -449,7 +449,7 @@ font-weight: 800; */
 /* Здесь заканчиваются стили для карточек */
 /* Здесь начинаются стили для преимуществ */
 .Advantages{
-    margin: 20px 60px 20px 60px;
+    margin: 60px;
 }
 .box{
     display: flex;
@@ -491,7 +491,7 @@ font-weight: 800; */
 /* Здесь заканчиваются стили для преимуществ */
 /* Здесь начинаются стили для СТА */
 .CTA{
-    margin: 20px 60px 20px 60px;
+    margin: 60px;
 }
 .text_s_1
 {
@@ -500,7 +500,7 @@ font-weight: 800; */
     align-items: center;
     color: #00D68F;
     font-size: 20px;
-    margin: 20px;
+    margin: 1rem;
 }
 .text_s_2{
     display: flex;
@@ -509,6 +509,7 @@ font-weight: 800; */
     color: #FFFFFF;
     font-size: 40px;
     font-weight: bolder;
+    margin-bottom: 1rem;
 }
 .text_s_3{
     display: flex;
@@ -517,8 +518,62 @@ font-weight: 800; */
     color: rgba(255, 255, 255, 0.4);
     font-size: 12px;
     font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.try_it{
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    background-color: unset;
+    font-size: 16px;
+    color: #7B6EF6;
+    border: 1px solid rgba(124, 110, 246, 0.514);
+    box-shadow: none;
+    font-weight: 800;
+}
+.spans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+.Plus{
+    padding: 8px;
+    background-color: rgba(0, 214, 143, 0.8);
+    border-radius: 180px;
+}
+.spans > span{
+    color:rgba(255, 255, 255, 0.4);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 200;
 }
 /* Здесь заканчиваются стили для СТА */
+/* Здесь начинаются стили для подвала */
+footer{
+    margin-top: 80px;
+}
+.actions > h4{
+    color:rgba(255, 255, 255, 0.8);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+.buttons{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.buttons > a{
+    font-family: 'DM Sans', sans-serif;
+    color:rgba(255, 255, 255, 0.8);
+    font-size: .9rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+/* Здесь заканчиваются стили для подвала */
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 rgba(0, 214, 143, .5);
