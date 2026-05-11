@@ -6,6 +6,8 @@ padding: 0px;
 :root {
     --bg: #120e25;
 }
+p{color: #FF6B35;}
+.main_head > h1{color: #FF6B35;}
 
 body{
     font-family: 'DM Sans', sans-serif;
