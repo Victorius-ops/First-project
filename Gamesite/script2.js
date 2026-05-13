@@ -101,3 +101,55 @@ function printEvenNumbers (n) {
 printEvenNumbers(10)
 printEvenNumbers(8)
 printEvenNumbers(15)
+
+function askNumber (text) {
+    let a = Number(prompt(`Введите число a`)) 
+    let b = Number(prompt(`Введите число b`))
+    console.log(a,b)
+}
+
+function askOperation() {
+    let op = prompt(`Укажите действие`)
+    // if (a == `+`) {
+    //     console.log(`corrrect`)
+    // } else if (a == `-`) {
+    //     console.log(`corrrect`)
+    // } else if (a == `*`) {
+    //     console.log(`corrrect`)
+    // } else if (a == `/`) {
+    //     console.log(`corrrect`)
+    // } else {
+    //     return console.log(`Invalid operation`)
+    // }
+    return op
+}
+function add(a,b) {
+    return a + b
+}
+function subtract(a, b) {
+    return a - b
+}
+ function multiply(a, b) {
+    return a * b
+}
+function divide(a, b) {
+    return a / b
+}
+function calculate(a, b, operation) {
+    if (askOperation == `+`) {
+        console.log(add)
+    } else if (askOperation == `-`) {
+        console.log(subtract)
+    } else if (askOperation == `*`) {
+        console.log(multiply)
+    } else if (askOperation == `/`) {
+        console.log(divide)
+    } else {
+        console.log(`Unknown operation`)
+    }
+    
+}
+askNumber()
+askOperation()
+calculate()
+console.log(divide(6,3))
