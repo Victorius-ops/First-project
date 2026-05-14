@@ -103,26 +103,34 @@ printEvenNumbers(8)
 printEvenNumbers(15)
 
 function askNumber (text) {
-    let a = Number(prompt(`Введите число a`)) 
-    let b = Number(prompt(`Введите число b`))
-    console.log(a,b)
+    return Number(prompt(text))
+    // return console.log(a,b)
 }
-
 function askOperation() {
     let op = prompt(`Укажите действие`)
-    // if (a == `+`) {
-    //     console.log(`corrrect`)
-    // } else if (a == `-`) {
-    //     console.log(`corrrect`)
-    // } else if (a == `*`) {
-    //     console.log(`corrrect`)
-    // } else if (a == `/`) {
-    //     console.log(`corrrect`)
-    // } else {
-    //     return console.log(`Invalid operation`)
-    // }
-    return op
+    if (op == `+`) {
+        console.log(`corrrect`)
+        return askOperation = `+`
+    } else if (op == `-`) {
+        console.log(`corrrect`)
+        return askOperation = `-`
+    } else if (op == `*`) {
+        console.log(`corrrect`)
+        return askOperation = `*`
+    } else if (op == `/`) {
+        console.log(`corrrect`)
+        return askOperation = `/`
+    } else {
+        return console.log(`Invalid operation`)
+    }
+    // return op
 }
+let a_var = askNumber(`Укажите число a`)
+let b_var = askNumber(`Укажите число b`)
+let operation = askOperation(`Укажите действие`)
+console.log(`This is ${a_var} and ${b_var} `)
+// console.log(askNumber(`name`))
+
 function add(a,b) {
     return a + b
 }
@@ -136,20 +144,30 @@ function divide(a, b) {
     return a / b
 }
 function calculate(a, b, operation) {
-    if (askOperation == `+`) {
+    if (operation == `+`) {
+        return res = add(a_var,b_var)
         console.log(add)
-    } else if (askOperation == `-`) {
+    } else if (operation == `-`) {
+        return res = subtract(a_var,b_var)
         console.log(subtract)
-    } else if (askOperation == `*`) {
+    } else if (operation == `*`) {
+        return res = multiply(a_var,b_var)
         console.log(multiply)
-    } else if (askOperation == `/`) {
+    } else if (operation == `/`) {
+        return res = divide(a_var,b_var)
         console.log(divide)
     } else {
         console.log(`Unknown operation`)
     }
-    
 }
-askNumber()
-askOperation()
-calculate()
-console.log(divide(6,3))
+function showResult(result) {
+ console.log(calculate(a,b, operation))
+}
+// let a = `Enter first number` + askNumber(text)
+// let b = `Enter second number` + askNumber()
+// let c = a + askOperation() + b 
+// console.log(`Результат ` + c)
+// askNumber()
+// askOperation()
+// calculate()
+// console.log(divide(6,3))
