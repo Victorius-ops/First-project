@@ -104,7 +104,6 @@ printEvenNumbers(15)
 
 function askNumber (text) {
     return Number(prompt(text))
-    // return console.log(a,b)
 }
 function askOperation() {
     let op = prompt(`Укажите действие`)
@@ -123,15 +122,14 @@ function askOperation() {
     } else {
         return console.log(`Invalid operation`)
     }
-    // return op
 }
 let a_var = askNumber(`Укажите число a`)
 let b_var = askNumber(`Укажите число b`)
 let operation = askOperation(`Укажите действие`)
 console.log(`This is ${a_var} and ${b_var} `)
-// console.log(askNumber(`name`))
 
-function add(a,b) {
+
+function add(a, b) {
     return a + b
 }
 function subtract(a, b) {
@@ -145,24 +143,27 @@ function divide(a, b) {
 }
 function calculate(a, b, operation) {
     if (operation == `+`) {
-        return res = add(a_var,b_var)
+        return add(a_var,b_var)
         console.log(add)
     } else if (operation == `-`) {
-        return res = subtract(a_var,b_var)
+        return subtract(a_var,b_var)
         console.log(subtract)
     } else if (operation == `*`) {
-        return res = multiply(a_var,b_var)
+        return multiply(a_var,b_var)
         console.log(multiply)
     } else if (operation == `/`) {
-        return res = divide(a_var,b_var)
+        return divide(a_var,b_var)
         console.log(divide)
     } else {
         console.log(`Unknown operation`)
     }
 }
+
 function showResult(result) {
- console.log(calculate(a,b, operation))
+    let res = calculate(a_var, b_var, operation)
+    return result = res
 }
+alert(`Результат = ` + showResult())
 // let a = `Enter first number` + askNumber(text)
 // let b = `Enter second number` + askNumber()
 // let c = a + askOperation() + b 
