@@ -56,14 +56,122 @@
 // let animals = ["Кот", "Собака", "Тигр"]
 // printArray(animals)
 
-// Улучшить функцию так, чтобы она определяла самое большее значение (по длинне символов в одной строке) в массиве и возвращало его
-function printGames (games) {
-    let i = 0
-    while (i < games.length) {
-      console.log(games[i])
-      i++
-    }
+// Улучшить функцию так, чтобы она определяла самое большее значение (по длинне символов в о) в массиве и возвращало его
+
+// function printGames (games) {
+//     let i = 0
+//     while (i < games.length) {
+//       console.log(games[i])
+//       i++
+//     }
+// }
+
+// Задание 1
+
+// let game = ["Minecraft", "Roblox", "Battlefield", "Skyrim"]
+// printGames(game)
+// console.log(game[0])
+// console.log(game[2])
+// console.log(game[game.length - 1])
+
+// Задание 2
+
+// let games = ["Minecraft", "Roblox", "CS2"]
+// console.log(games[0])
+// console.log(games[games.length - 1])
+// for (let i = 0; i < games.length; i++) {
+//   console.log(games[i])
+// }
+
+// Задание 3
+
+// let names = ["Кристина","Егор","Елена", "Игорь"]
+// console.log(names)
+// names[1] = "Виктор"
+// names[names.length - 1] = "Максим"
+// console.log(names)
+
+// Задание 4
+
+// let movies = ["Интерстеллар", "Аватар", "Шрек", "Безумный Макс", "Эквилибриум"]
+// for (i = 0; i < movies.length; i++) {
+//     console.log(`Фильм ${i + 1} : ${movies[i]}`)
+// }
+
+// Задание 5
+
+// let scores = [5, 2, 4, 1, 3]
+// sum = 0 
+
+// for (i = 0; i < scores.length; i++) {
+//    sum += scores[i]
+// }
+// console.log(sum)
+
+// Задание 6
+
+// let scores = [5, 2, 4, 1, 3]
+// let sum = 0
+// for (i = 0; i < scores.length; i++) {
+//    sum += scores[i]/scores.length
+// }
+// console.log(sum)
+
+// Задание 7
+
+// let animals = ["Кот", "Собака", "Черепаха", "Воробей", "Конь"]
+// function printArray(items) {
+//     let arr = items
+//     let i = 0
+//     while (i < arr.length) {
+//         console.log(arr[i])
+//         i++
+//     }
+// }
+// printArray(animals)
+
+// Задание 8
+
+// let arr = [1, 9, 3, 2, 15, 76]
+// function getSum(numbers) {
+//     let sum = 0
+//     for (i = 0; i < numbers.length; i++) {
+//     sum += numbers[i]
+//     }
+//     console.log(sum)
+// }
+// getSum(arr)
+
+// Задание 9 (Главное задание)
+
+let favoriteGames = ["Minecraft", "Roblox", "CS2", "Witcher", "Skyrim"]
+console.log(favoriteGames.length)
+console.log(favoriteGames[0])
+console.log(favoriteGames[favoriteGames.length - 1])
+for (i = 0; i < favoriteGames.length; i++) {
+    console.log(`${i + 1}. ${favoriteGames[i]}`)
 }
-let game = ["Minecraft", "Roblox", "Battlefield", "Skyrim"]
-console.log("Egor".length)
-printGames(game)
+favoriteGames[1] = "Blacksad - Under the skin"
+console.log(favoriteGames)
+function printGames(games) {
+    for (i = 0; i < favoriteGames.length; i++) {
+    console.log(`${i + 1}. ${favoriteGames[i]}`)
+    } 
+}
+printGames(favoriteGames)
+
+// Задание 10 (Доп)
+
+let grade = [1, 2, 3, 4, 5]
+let quality = [180, 12, 56, 53, 91]
+function averageScore(scores) {
+    let sum = 0
+    for (i = 0; i < scores.length; i++) {
+    sum += scores[i]
+    }
+    console.log(`Сумма оценок: ${sum}`)
+    console.log(`Средняя оценка: ${sum/scores.length}`)
+    
+}
+averageScore(grade)
+averageScore(quality)
