@@ -81,26 +81,27 @@
 // 3 * 5 = 15
 // 3 * 6 = 18
 
-function multiply (a,b) {
-    return a * b
-}
-console.log(multiply(4, 5))
-console.log(multiply(12, 5))
-console.log(multiply(10, 8))
+// function multiply (a,b) {
+//     return a * b
+// }
+// console.log(multiply(4, 5))
+// console.log(multiply(12, 5))
+// console.log(multiply(10, 8))
 
 
-function printEvenNumbers (n) {
-    let p = 1
-    while (p < n) {
-        p++
-        if (p % 2 == 0) {
-            console.log(p);
-        }
-    }
-}
-printEvenNumbers(10)
-printEvenNumbers(8)
-printEvenNumbers(15)
+// function printEvenNumbers (n) {
+//     let p = 1
+//     while (p < n) {
+//         if (p % 2 == 0) {
+//             console.log(p);
+//         }
+//         p++
+//     }
+// }
+
+// printEvenNumbers(10)
+// printEvenNumbers(8)
+// printEvenNumbers(15)
 
 function askNumber (text) {
     return Number(prompt(text))
@@ -123,8 +124,8 @@ function askOperation() {
         return console.log(`Invalid operation`)
     }
 }
-let a_var = askNumber(`Укажите число a`)
-let b_var = askNumber(`Укажите число b`)
+let a_var = askNumber(`Enter first number`)
+let b_var = askNumber(`Enter second number`)
 let operation = askOperation(`Укажите действие`)
 console.log(`This is ${a_var} and ${b_var} `)
 
@@ -152,10 +153,14 @@ function calculate(a, b, operation) {
         return multiply(a_var,b_var)
         console.log(multiply)
     } else if (operation == `/`) {
+        if (b_var == 0) {
+            return alert(`Cannot divide by zero`)
+        } else{
         return divide(a_var,b_var)
+        }
         console.log(divide)
     } else {
-        console.log(`Unknown operation`)
+        alert(`Unknown operation, try again`)
     }
 }
 
@@ -163,7 +168,7 @@ function showResult(result) {
     let res = calculate(a_var, b_var, operation)
     return result = res
 }
-alert(`Результат = ` + showResult())
+alert(`Result = ` + showResult())
 // let a = `Enter first number` + askNumber(text)
 // let b = `Enter second number` + askNumber()
 // let c = a + askOperation() + b 
