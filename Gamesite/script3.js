@@ -144,34 +144,143 @@
 
 // Задание 9 (Главное задание)
 
-let favoriteGames = ["Minecraft", "Roblox", "CS2", "Witcher", "Skyrim"]
-console.log(favoriteGames.length)
-console.log(favoriteGames[0])
-console.log(favoriteGames[favoriteGames.length - 1])
-for (i = 0; i < favoriteGames.length; i++) {
-    console.log(`${i + 1}. ${favoriteGames[i]}`)
-}
-favoriteGames[1] = "Blacksad - Under the skin"
-console.log(favoriteGames)
-function printGames(games) {
-    for (i = 0; i < favoriteGames.length; i++) {
-    console.log(`${i + 1}. ${favoriteGames[i]}`)
-    } 
-}
-printGames(favoriteGames)
+// let favoriteGames = ["Minecraft", "Roblox", "CS2", "Witcher", "Skyrim"]
+// console.log(favoriteGames.length)
+// console.log(favoriteGames[0])
+// console.log(favoriteGames[favoriteGames.length - 1])
+// for (i = 0; i < favoriteGames.length; i++) {
+//     console.log(`${i + 1}. ${favoriteGames[i]}`)
+// }
+// favoriteGames[1] = "Blacksad - Under the skin"
+// console.log(favoriteGames)
+// function printGames(games) {
+//     for (i = 0; i < favoriteGames.length; i++) {
+//     console.log(`${i + 1}. ${favoriteGames[i]}`)
+//     } 
+// }
+// printGames(favoriteGames)
 
-// Задание 10 (Доп)
+// // Задание 10 (Доп)
 
-let grade = [1, 2, 3, 4, 5]
-let quality = [180, 12, 56, 53, 91]
-function averageScore(scores) {
-    let sum = 0
-    for (i = 0; i < scores.length; i++) {
-    sum += scores[i]
-    }
-    console.log(`Сумма оценок: ${sum}`)
-    console.log(`Средняя оценка: ${sum/scores.length}`)
+// let grade = [1, 2, 3, 4, 5]
+// let quality = [180, 12, 56, 53, 91]
+// function averageScore(scores) {
+//     let sum = 0
+//     for (i = 0; i < scores.length; i++) {
+//     sum += scores[i]
+//     }
+//     console.log(`Сумма оценок: ${sum}`)
+//     console.log(`Средняя оценка: ${sum/scores.length}`)
     
+// }
+// averageScore(grade)
+// averageScore(quality)
+
+// let playerName = "Alex"
+// let playerHp = 100
+// let playerLevel = 5
+// let playerCoins = 50
+
+
+
+// let player = {
+//     nickName: "Alex",
+//     hp: 100,
+//     level: 5,
+//     coins: 50
+// }
+// console.log(player.nickName)
+
+// let alex_array = ["Alex", 100, 5, 50]
+// let alex_array_obj = {
+//     "0": "Alex",
+//     "1": 100,
+//     "2": 5,
+//     "3": 50
+// }
+
+// player.hp
+// player["hp"]
+
+// console.log(`Test: ${player["hp"]}`)
+// console.log(`NickName: ${alex_array[0]}`)
+
+// const pet = {
+//     name: `Alice`,
+//     race: `Cat`,
+//     age: `4`,
+//     live: true
+// }
+// console.log(pet.live)
+// console.log(pet.race)
+// pet.race = `dog`
+// console.log(pet.race)
+
+// const users = [
+//   {
+//     name: "Егор",
+//     age: 25
+//   },
+//   {
+//     name: "Аня",
+//     age: 20
+//   },
+//   {
+//     name: "Максим",
+//     age: 30
+//   }
+// ];
+
+// console.log(users[0].name)
+
+// const student = {
+//   name: "Егор",
+//   skills: ["HTML", "CSS", "JavaScript"],
+//   scores: {
+//     name: {
+
+//     }
+//   }
+// };
+
+// console.log(student.skills[0])
+
+// let i = 0
+// while(i < users.length) {
+//     console.log(users[i].name)
+//     i++
+// }
+
+
+// let title = {
+//     text: "123123",
+//     color: "#000",
+//     fontSize: 123
+// }
+
+// title.textContent = "!123a"
+
+// console.log(document)
+
+// // let button = {
+// //     textContent = "123",
+// //     onclick = () => {
+
+// //     },
+    
+// // }
+// console.log(title.textContent)
+// title.textContent = `TEST`
+// console.log(title.textContent)
+let title = document.querySelector("#test")
+let input = document.querySelector(".name-input")
+let button = document.querySelector("#button_name")
+
+button.onclick = function() {
+    title.textContent = `Привет, ${input.value} !`
 }
-averageScore(grade)
-averageScore(quality)
+
+title.style.color = "red"
+title.style.fontSize = "40px"
+title.style.background = "blue"
+title.style.borderRadius = "48px"
