@@ -3,22 +3,23 @@
     padding: 0;
 }
 body{
-    background-color: darkslateblue;
+    background-image: url(./source/b4138a71ac935981d68e6c3089e7ec76.jpg);
 }
 .card{
     display: flex;
     flex-direction: column;
     gap: 4px;
     align-items: center;
-    background: crimson;
     border-radius: 28px;
-    box-shadow: red 8px 8px 12px;
+    box-shadow: deepskyblue 8px 8px 12px; 
     padding: 20px;
     margin: 20px;
     width: 340px;
     position: fixed;
     top: calc(50% - 100px);
     left: calc(50% - 150px);
+    background-image: url(https://avatars.mds.yandex.net/i?id=12766fce2b5f1bebe49b1f0fd5f168e0_l-5447391-images-thumbs&n=13);
+    color: white;
 }
 button{
     background-color: greenyellow;
@@ -42,17 +43,26 @@ input{
 }
 .btns {
     display: grid;
-    grid-template-rows: repeat(2, 4vh) ;
+    grid-template-rows: repeat(3, 4vh) ;
     grid-template-columns: repeat(6, 18vh);
     gap: 20px;
     position: fixed;
-    top: calc(40% - 100px);
+    top: calc(30% - 100px);
     left: calc(30% - 100px);
     margin: -10px;
-    .message {
-        grid-column: span 3
+
+    .name-input {
+        grid-column: span 3;
+        text-align: center;
+    }
+    .change-name-btn {
+        grid-column:  span 3;
     }
     .theme-btn {
         grid-column: span 3
     }
+    .message {
+        grid-column: span 3
+    }
+    
 }
