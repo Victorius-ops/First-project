@@ -81,7 +81,10 @@ damage.onclick = function() {
 heal.onclick = function() {
     if (hero.hp >= 100) {
         MSG.textContent =`Ты полностью здоров!`
-    } else {
+    } else if(hero.hp <= 0) {
+        MSG.textContent = `Нельзя восскресить мертвеца!`
+    }
+    else {
         hero.hp = hero.hp + 10
         MSG.textContent = `Герой восстановил здоровье!`
         renderHero(hero)
@@ -131,13 +134,16 @@ themeChange.onclick = function() {
 superHeal.onclick = function() {
     if (hero.hp >= 100) {
         MSG.textContent =`Ты полностью здоров!`
-    } else if ( hero.hp < 100 && hero.coins >= 20) {
+    }  else if(hero.hp <= 0) {
+         MSG.textContent = `Нельзя восскресить мертвеца!`
+    }  else if ( hero.hp < 100 && hero.coins >= 20) {
         hero.hp = hero.hp + 30
         hero.coins = hero.coins - 20
         MSG.textContent = `Герой приобрел и использовал зелье здоровья!`
         HPcheck()
         renderHero(hero)
-    }  else {
+    } 
+      else {
         MSG.textContent = `Недостаточно монет для покупики зелья здоровья!`
     }
     HPbar()
