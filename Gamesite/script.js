@@ -92,13 +92,13 @@ themeChange.onclick = function() {
         card.style.background = `crimson`
         card.style.boxShadow = `crimson 8px 8px 12px`
         card.style.color = `white`
-        console.log(`Темная тема включена`)
+        MSG.textContent = `Темная тема включена`
         i = 0
     } else {
         card.style.background = `white`
         card.style.boxShadow = `white 8px 8px 12px`
         card.style.color = `black`
-        console.log(`Светлая тема включена`)
+        MSG.textContent = `Светлая тема включена` 
         i++
     }
 }
