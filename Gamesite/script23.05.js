@@ -71,8 +71,9 @@ damage.onclick = function() {
     if (hero.hp <= 0) {
         alert(`You die`)
     } else {
-        hero.hp = hero.hp - 10
-        MSG.textContent = `Герой получил урон!`
+        let dmg = getRandomInt(1 , 10)
+        hero.hp = hero.hp - dmg
+        MSG.textContent = `Герой получил ${dmg} урона!`
         renderHero(hero)
     }
     HPbar()
@@ -87,6 +88,7 @@ heal.onclick = function() {
     else {
         hero.hp = hero.hp + 10
         MSG.textContent = `Герой восстановил здоровье!`
+        HPcheck()
         renderHero(hero)
     }
     HPbar()
@@ -109,27 +111,33 @@ getCoins.onclick = function() {
     if (hero.coins >= 175) {
         MSG.textContent =`Твой кошелек переполнен`
     } else {
-        hero.coins = hero.coins + 25
-        MSG.textContent = `Ты получил 25 монет!`
+        let money = getRandomInt(1, 25)
+        hero.coins = hero.coins + money
+        MSG.textContent = `Ты получил ${money} монет!`
         renderHero(hero)
     }
 }
 let i = 0
 themeChange.onclick = function() {
     if (i == 1) {
-        card.style.backgroundImage = `url(https://avatars.mds.yandex.net/i?id=12766fce2b5f1bebe49b1f0fd5f168e0_l-5447391-images-thumbs&n=13)`
-        card.style.boxShadow = `deepskyblue 8px 8px 12px`
-        card.style.color = `white`
+        // card.style.backgroundImage = `url(https://avatars.mds.yandex.net/i?id=12766fce2b5f1bebe49b1f0fd5f168e0_l-5447391-images-thumbs&n=13)`
+        // card.style.boxShadow = `deepskyblue 8px 8px 12px`
+        // card.style.color = `white`
+        card.classList.remove(`whiteTheme`)
+        card.classList.add(`darkThem`)
         MSG.textContent = `Темная тема включена`
         i = 0
     } else {
-        card.style.background = `url(https://img.freepik.com/premium-photo/snow-sky-clouds-background-abstract-beautiful-landscape-in-the-clouds-abstract-snowflakes_548821-18947.jpg?size=626&ext=jpg)`
-        card.style.backgroundPosition = `center`
-        card.style.boxShadow = `white 8px 8px 12px`
-        card.style.color = `black`
+        // card.style.background = `url(https://img.freepik.com/premium-photo/snow-sky-clouds-background-abstract-beautiful-landscape-in-the-clouds-abstract-snowflakes_548821-18947.jpg?size=626&ext=jpg)`
+        // card.style.backgroundPosition = `center`
+        // card.style.boxShadow = `white 8px 8px 12px`
+        // card.style.color = `black`
+        card.classList.remove(`darkThem`)
+        card.classList.add(`whiteTheme`)
         MSG.textContent = `Светлая тема включена` 
         i++
     }
+    renderHero(hero)
 }
 superHeal.onclick = function() {
     if (hero.hp >= 100) {
@@ -157,3 +165,8 @@ spendCoins.onclick = function() {
         renderHero(hero)
     }
 }
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRandomInt(1, 99))

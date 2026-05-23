@@ -66,3 +66,16 @@ input{
     }
     
 }
+
+.darkThem{
+    background-image: url(https://avatars.mds.yandex.net/i?id=12766fce2b5f1bebe49b1f0fd5f168e0_l-5447391-images-thumbs&n=13);
+    color: white;
+    box-shadow: deepskyblue 8px 8px 12px;
+}
+.whiteTheme{
+background-image: url(https://img.freepik.com/premium-photo/snow-sky-clouds-background-abstract-beautiful-landscape-in-the-clouds-abstract-snowflakes_548821-18947.jpg?size=626&ext=jpg);
+background-position: center;
+box-shadow: white 8px 8px 12px;
+color: black;
+}
+
