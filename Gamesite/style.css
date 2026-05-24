@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.tasks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+
+}
+.taska{
+    padding: 8px;
+    background: goldenrod;
+    width: fit-content;
+    height: max-content;
+    border-radius: 28px;
+    margin: 28px;
+}
+.taskList{
+    background: aqua;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 14vh);
+    border-radius: 120px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    background: lemonchiffon;
+    color: black;
+    padding: 6px;
+    text-align: center;
+    border-radius: 12px;
+    width: max-content;
+}
+.button{
+    background: green;
+    color: red;
+    padding: 8px;
+    border-radius: 28px;
+}
+.mainDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(50% - 400px);
+    left: calc(50% - 400px);
+    gap: 20px;
+}
+.mainScreen{
+    background-color: mediumaquamarine;
+}
+.warning{
+    background: yellow;
+    color: black;
+}
+.taskDone{
+    background-color: green;
+    box-shadow: greenyellow 12px 12px 12px;
+}
