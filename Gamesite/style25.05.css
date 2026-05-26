@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.tasks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+
+}
+.taskaText{
+    max-width: min-content;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.taskaTextDone{
+    max-width: min-content;
+    text-decoration: line-through;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.taska{
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: goldenrod;
+    border-radius: 28px;
+    /* margin: 28px; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: yellow 6px 6px 12px;
+    transition: all 1s;
+}
+.taska:hover{
+    background-color: gold;
+}
+
+/* .taskaDark{
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background: black;
+    border-radius: 28px;
+    margin: 28px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: yellow 6px 6px 12px;
+    transition: all 1s;
+} */
+.taskList{
+    background: aqua;
+    display: grid;
+    grid-template-columns: repeat(4, 20vh);
+    grid-template-rows: repeat(8, 25vh);
+    border-radius: 120px;
+    padding: 80px;
+    gap: 20px;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s;
+}
+.taskListDark{
+    background: darkslateblue;
+    display: grid;
+    grid-template-columns: repeat(4, 20vh);
+    grid-template-rows: repeat(8, 25vh);
+    border-radius: 120px;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s;
+}
+.input{
+    background: lemonchiffon;
+    color: black;
+    padding: 6px;
+    text-align: center;
+    border-radius: 12px;
+    width: max-content;
+}
+.button{
+    padding: 8px;
+    color: yellow;
+    background: green;
+    border-radius: 28px;
+    transition: all 1s;
+}
+.button:hover{
+    box-shadow: yellow 6px 6px 28px;
+}
+.mainDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(50% - 400px);
+    left: calc(50% - 400px);
+    gap: 20px;
+}
+.mainScreen{
+    background-color: mediumaquamarine;
+    transition: all 0.6s;
+}
+.mainScreenDark{
+    background-color: darkslategrey;
+    transition: all 0.6s;
+}
+.warning{
+    background: yellow;
+    color: black;
+}
+.taskDone{
+    background-color: green;
+    box-shadow: greenyellow 6px 6px 12px;
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 28px;
+    transition: all 1s;
+}
+.taskDone:hover{
+    background-color: aquamarine;
+}
+.delete{
+    background: peachpuff;
+    padding: 2px;
+    border-radius: 40px;
+    width: min-content;
+}
+.deleteCheck{
+    background: red;
+    padding: 2px;
+    border-radius: 40px;
+    width: min-content;
+}
+
+.counter{
+    background: rgb(16, 117, 33);
+    color: lemonchiffon;
+    border-radius: 40px;
+    padding: 8px;
+}
