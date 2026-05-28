@@ -155,58 +155,96 @@
 // })
 
 // Задание 5 
-let card = document.querySelectorAll(`.card`)
-let all = document.querySelector(`#All`)
-let games = document.querySelector(`#Games`)
-let films = document.querySelector(`#Films`)
-let musics = document.querySelector(`#Musics`)
-console.log(all)
-games.addEventListener(`click`, () => {
-    card.forEach((elemets) => {
-        elemets.classList.remove(`hidden`)
-        if(elemets.dataset.category != `Game`) {
-            elemets.classList.add(`hidden`)
+// let card = document.querySelectorAll(`.card`)
+// let all = document.querySelector(`#All`)
+// let games = document.querySelector(`#Games`)
+// let films = document.querySelector(`#Films`)
+// let musics = document.querySelector(`#Musics`)
+// console.log(all)
+// games.addEventListener(`click`, () => {
+//     card.forEach((elemets) => {
+//         elemets.classList.remove(`hidden`)
+//         if(elemets.dataset.category != `Game`) {
+//             elemets.classList.add(`hidden`)
+//         }
+//         if (games.classList == `active`) {
+//                 films.classList.remove(`active`)
+//                 musics.classList.remove(`active`)
+//             }
+//         games.classList.add(`active`)
+//     })
+// })
+// films.addEventListener(`click`, () => {
+//     card.forEach((elemets) => {
+//         elemets.classList.remove(`hidden`)
+//         if(elemets.dataset.category != `Film`) {
+//             elemets.classList.add(`hidden`)
+//             if (films.classList == `active`) {
+//                 games.classList.remove(`active`)
+//                 musics.classList.remove(`active`)
+//             }
+//         }
+//         films.classList.add(`active`)
+//     })
+// })
+// musics.addEventListener(`click`, () => {
+//     card.forEach((elemets) => {
+//         elemets.classList.remove(`hidden`)
+//         if(elemets.dataset.category != `Song`) {
+//             elemets.classList.add(`hidden`)
+//         }
+//         if (musics.classList == `active`) {
+//                 games.classList.remove(`active`)
+//                 films.classList.remove(`active`)
+//             }
+//         musics.classList.add(`active`)
+//     })
+// })
+// all.addEventListener(`click`, () => {
+//     card.forEach((elemets) => {
+//         if(elemets.classList == `card hidden`) {
+//             elemets.classList.remove(`hidden`)
+//         }
+//         games.classList.remove(`active`)
+//         films.classList.remove(`active`)
+//         musics.classList.remove(`active`)
+//     })
+// })
+// Задание 6
+let cards = document.querySelectorAll(`.card`)
+let key = document.querySelector(`#keyboards`)
+let mouse = document.querySelector(`#mouses`)
+let mon = document.querySelector(`#monitors`)
+let price = document.querySelector(`#lowprice`)
+key.addEventListener(`click`, () => {
+    cards.forEach((card) => {
+        card.classList.remove(`hidden`)
+        if (card.dataset.category != `keyboard`) {
+            card.classList.add(`hidden`)
         }
-        if (games.classList == `active`) {
-                films.classList.remove(`active`)
-                musics.classList.remove(`active`)
-            }
-        games.classList.add(`active`)
     })
 })
-films.addEventListener(`click`, () => {
-    card.forEach((elemets) => {
-        elemets.classList.remove(`hidden`)
-        if(elemets.dataset.category != `Film`) {
-            elemets.classList.add(`hidden`)
-            if (films.classList == `active`) {
-                games.classList.remove(`active`)
-                musics.classList.remove(`active`)
-            }
+mouse.addEventListener(`click`, () => {
+    cards.forEach((card) => {
+        card.classList.remove(`hidden`)
+        if (card.dataset.category != `mouse`) {
+            card.classList.add(`hidden`)
         }
-        films.classList.add(`active`)
     })
 })
-musics.addEventListener(`click`, () => {
-    card.forEach((elemets) => {
-        elemets.classList.remove(`hidden`)
-        if(elemets.dataset.category != `Song`) {
-            elemets.classList.add(`hidden`)
+mon.addEventListener(`click`, () => {
+    cards.forEach((card) => {
+        card.classList.remove(`hidden`)
+        if (card.dataset.category != `monitor`) {
+            card.classList.add(`hidden`)
         }
-        if (musics.classList == `active`) {
-                games.classList.remove(`active`)
-                films.classList.remove(`active`)
-            }
-        musics.classList.add(`active`)
     })
 })
-all.addEventListener(`click`, () => {
-    card.forEach((elemets) => {
-        if(elemets.classList == `card hidden`) {
-            elemets.classList.remove(`hidden`)
+price.addEventListener(`click`, () => {
+    cards.forEach((card) => {
+        card.classList.remove(`hidden`)
+        if (card.dataset.price >= 5000) {
+            card.classList.add(`hidden`)
         }
-        games.classList.remove(`active`)
-        films.classList.remove(`active`)
-        musics.classList.remove(`active`)
     })
 })
