@@ -160,6 +160,7 @@
 // let games = document.querySelector(`#Games`)
 // let films = document.querySelector(`#Films`)
 // let musics = document.querySelector(`#Musics`)
+// let btns = document.querySelectorAll(`button`)
 // console.log(all)
 // games.addEventListener(`click`, () => {
 //     card.forEach((elemets) => {
@@ -168,8 +169,11 @@
 //             elemets.classList.add(`hidden`)
 //         }
 //         if (games.classList == `active`) {
-//                 films.classList.remove(`active`)
-//                 musics.classList.remove(`active`)
+//                 // films.classList.remove(`active`)
+//                 // musics.classList.remove(`active`)
+//                 btns.forEach((style) => {
+//                 style.classList.remove(`active`)
+//                 })
 //             }
 //         games.classList.add(`active`)
 //     })
@@ -179,11 +183,14 @@
 //         elemets.classList.remove(`hidden`)
 //         if(elemets.dataset.category != `Film`) {
 //             elemets.classList.add(`hidden`)
-//             if (films.classList == `active`) {
-//                 games.classList.remove(`active`)
-//                 musics.classList.remove(`active`)
-//             }
 //         }
+//             if (films.classList == `active`) {
+//                 // games.classList.remove(`active`)
+//                 // musics.classList.remove(`active`)
+//                 btns.forEach((style) => {
+//                     style.classList.remove(`active`)
+//                 })
+//             }
 //         films.classList.add(`active`)
 //     })
 // })
@@ -193,9 +200,12 @@
 //         if(elemets.dataset.category != `Song`) {
 //             elemets.classList.add(`hidden`)
 //         }
-//         if (musics.classList == `active`) {
-//                 games.classList.remove(`active`)
-//                 films.classList.remove(`active`)
+//             if (musics.classList == `active`) {
+//                 // games.classList.remove(`active`)
+//                 // films.classList.remove(`active`)
+//               btns.forEach((style) => {
+//                 style.classList.remove(`active`)
+//                 })
 //             }
 //         musics.classList.add(`active`)
 //     })
@@ -216,29 +226,84 @@ let key = document.querySelector(`#keyboards`)
 let mouse = document.querySelector(`#mouses`)
 let mon = document.querySelector(`#monitors`)
 let price = document.querySelector(`#lowprice`)
-key.addEventListener(`click`, () => {
-    cards.forEach((card) => {
-        card.classList.remove(`hidden`)
-        if (card.dataset.category != `keyboard`) {
-            card.classList.add(`hidden`)
-        }
+let currentCategory = `all`
+
+// function filterCategory(category) {
+//     currentCategory = category
+//     cards.forEach((card) => {
+//         card.classList.remove(`hidden`)
+//         if (card.dataset.category != category) {
+//             card.classList.add(`hidden`)
+//         }
+//     })
+// }
+
+let items = [
+{
+    name: `Клавиатура Razer BlackWidow V3 Pro`,
+    category: `keyboard`,
+    price: 3000
+},
+{
+    name: `Мышь Logitech G Pro X Superlight`,
+    category: `mouse`,
+    price: 4000
+},
+{
+    name: `Монитор ASUS ROG Swift PG259QN`,
+    category: `monitor`,
+    price: 6000
+},
+{
+    name: `Клавиатура HyperX Alloy Origins 60`,
+    category: `keyboard`,
+    price: 6000
+},
+{
+    name: `Мышь Razer DeathAdder V2 Pro`,
+    category: `mouse`,
+    price: 6000
+}]
+
+function createCard(item) {
+    const card = document.createElement(`div`)
+    card.className = "card"
+    card.dataset.category = item.category
+    card.innerHTML = `
+        <h3>${item.name}</h3>
+        <span>${item.price}</span>
+    `
+    return card
+}
+
+function render() {
+    catalog.innerHTML = ''
+
+    const filteredItems = items.filter((item) => {
+        return currentCategory == "all" || item.category == currentCategory
     })
+
+    filteredItems.forEach((item) => {
+        catalog.append(createCard(item))
+    })
+}
+
+render()
+
+key.addEventListener(`click`, () => {
+    // filterCategory(`keyboard`)
+    currentCategory = `keyboard`
+    render()
 })
 mouse.addEventListener(`click`, () => {
-    cards.forEach((card) => {
-        card.classList.remove(`hidden`)
-        if (card.dataset.category != `mouse`) {
-            card.classList.add(`hidden`)
-        }
-    })
+    // filterCategory(`mouse`)
+    currentCategory = `mouse`
+    render()
 })
 mon.addEventListener(`click`, () => {
-    cards.forEach((card) => {
-        card.classList.remove(`hidden`)
-        if (card.dataset.category != `monitor`) {
-            card.classList.add(`hidden`)
-        }
-    })
+    // filterCategory(`monitor`)
+    currentCategory = `monitor`
+    render()
 })
 price.addEventListener(`click`, () => {
     cards.forEach((card) => {
@@ -248,3 +313,36 @@ price.addEventListener(`click`, () => {
         }
     })
 })
+
+const form = document.querySelector(`#formItems`)
+
+form.addEventListener('submit', (event) => {
+    // console.log(event)
+    // console.log(event.target)
+    event.preventDefault()
+    const search = form.elements.search.value
+    const category = form.elements.category.value
+    const price = form.elements.price.value
+
+
+    if (search.trim() == "") {
+        alert("Введите название товара")
+        return
+    }
+
+    if (Number(price) <= 0) {
+        alert("Введите корректную цену")
+        return
+    }
+
+    console.log(search, category, price)
+})
+
+// State - Состояние сайта
+// Рендер функция
+// 1. Очищает конейтер, чтобы старые карточки не дублировались
+// 2. Проходит по массиву данных 
+// 3. Проверяет, подходит ли карточка под текущий фильтр
+// 4. Создаёт DOM-карточку 
+// 5. Добавляет карточку в контейнер
+// 

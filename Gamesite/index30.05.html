@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style30.05.css">
 </head>
 <body>
     <!-- <div class="cards">
@@ -28,10 +28,23 @@
     <button id="mouses">Мыши</button>
     <button id="monitors">Мониторы</button>
     <button id="lowprice">Товары дешевле 5000</button>
-    <div class="card" data-category="keyboard" data-price="3500">Клавиатура Redragon — 3500</div>
-    <div class="card" data-category="mouse" data-price="2500">Мышка Logitech — 2500</div>
-    <div class="card" data-category="monitor" data-price="12000">Монитор Samsung — 12000</div>
-    <div class="card" data-category="keyboard" data-price="7000">Клавиатура HyperX — 7000</div>
-   <script src="script.js"></script> 
+
+    <form id="formItems" class="form">
+        <label for="search">Поиск:</label>
+        <input type="text" id="search" name="search">
+        <label for="category">Категория:</label>
+        <input type="text" id="category" name="category">
+        <label for="price">Цена:</label>
+        <input type="number" id="price" name="price">
+        <button type="submit">Найти</button>
+    </form>
+    <p id="forError" class="error"></p>
+    <div id="catalog">
+        <!-- <div class="card" data-category="keyboard" data-price="3500">Клавиатура Redragon — 3500</div>
+        <div class="card" data-category="mouse" data-price="2500">Мышка Logitech — 2500</div>
+        <div class="card" data-category="monitor" data-price="12000">Монитор Samsung — 12000</div>
+        <div class="card" data-category="keyboard" data-price="7000">Клавиатура HyperX — 7000</div> -->
+    </div>
+   <script src="script30.05.js"></script> 
 </body>
 </html>
