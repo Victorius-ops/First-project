@@ -170,3 +170,14 @@ btnimportant.onclick = () => {
     clear()
     btnimportant.classList.add(`active`)
 }
+
+const form = document.querySelector(`#taskings`)
+form.addEventListener(`submit`, (event) => {
+    event.preventDefault()
+    const names = form.elements.names.value
+    const categorys = form.elements.category.value
+    const minutes = form.elements.minute.value
+    const importants = form.elements.important.value
+    console.log(importants, categorys)
+
+})
