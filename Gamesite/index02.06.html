@@ -13,6 +13,24 @@
     <button id="Sport">Спорт</button>
     <button id="Important">Важные задачи</button>
     <div id="taskList"></div>
+    <form id="taskings" class="form">
+        <label for="name">Задача:</label>
+        <input type="text" id="name" name="name">
+        <label for="category">Категория:</label>
+        <select name="category" id="category">
+            <option value="">Выберите категорию</option>
+            <option value="study">Учёба</option>
+            <option value="home">Домашние дела</option>
+            <option value="sport">Спорт</option>
+        </select>
+        <label for="minute">Время:</label>
+        <input type="number" id="minute" name="minute">
+        <label for="important"></label>
+        Важная задача:
+        <input type="checkbox" id="important" value="yes">
+        <button type="submit">Создать задачу</button>
+    </form>
+    <span id="ErrMsg"></span>
     <script src="script02.06.js"></script>
 </body>
 </html>

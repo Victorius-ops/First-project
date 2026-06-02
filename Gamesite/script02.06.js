@@ -170,3 +170,55 @@ btnimportant.onclick = () => {
     clear()
     btnimportant.classList.add(`active`)
 }
+
+const form = document.querySelector(`#taskings`)
+
+form.addEventListener('submit', (event) => {
+    // console.log(event)
+    // console.log(event.target)
+    event.preventDefault()
+    const name = form.elements.name.value
+    const category = form.elements.category.value
+    const minute = form.elements.minute.value
+    const important = document.querySelector(`#important`)
+    const msg = document.querySelector(`#ErrMsg`)
+    
+    if(name.trim() == ``) {
+        msg.textContent = `Введите название задачи`
+        return
+    }
+    if(minute <= 0) {
+        msg.textContent = `Укажите корректное время`
+        return
+    }
+    if (category == ``) {
+        msg.textContent = `Выберите категорию`
+        return
+    }
+    if (important.checked) {
+        check = true
+    } else {
+        check = false
+    }
+    console.log(category, check)
+
+    tasks.push({
+        title:name,
+        category:category,
+        time:minute,
+        important:check
+    })
+    console.log(tasks)
+    render(tasks)
+//     if (search.trim() == "") {
+//         alert("Введите название товара")
+//         return
+//     }
+
+//     if (Number(price) <= 0) {
+//         alert("Введите корректную цену")
+//         return
+//     }
+
+//     console.log(search, category, price)
+})
