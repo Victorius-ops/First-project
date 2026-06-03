@@ -335,6 +335,10 @@ form.addEventListener('submit', (event) => {
         return
     }
 
+    if(isNaN(123)) { 
+        alert("Цена должна быть числом")
+    }
+
     console.log(search, category, price)
 })
 

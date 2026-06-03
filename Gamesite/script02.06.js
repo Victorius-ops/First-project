@@ -157,7 +157,7 @@ btnSport.onclick = () => {
     btnSport.classList.add(`active`)
 }
 btnimportant.onclick = () => {
-      currentCategory = `important`
+    currentCategory = `important`
     div.innerHTML = ``
     tasks.forEach((task) => {
         if (task.important == `важно`) {
@@ -187,7 +187,7 @@ form.addEventListener('submit', (event) => {
         msg.textContent = `Введите название задачи`
         return
     }
-    if(minute <= 0) {
+    if(Number(minute) <= 0) {
         msg.textContent = `Укажите корректное время`
         return
     }
@@ -222,3 +222,85 @@ form.addEventListener('submit', (event) => {
 
 //     console.log(search, category, price)
 })
+
+// localStorage.setItem("tasks", JSON.stringify([1,2,2,3,4,5,67,7]))
+
+// let a = localStorage.getItem("tasks")
+// console.log(a)
+// console.log(typeof a)
+
+// let b = JSON.parse(a)
+// console.log(b)
+// console.log(typeof b)
+
+localStorage.setItem("games", JSON.stringify([
+    {
+        title: "The Witcher 3",
+        genre: "RPG",},
+    {
+        title: "Cyberpunk 2077",
+        genre: "RPG",},
+    {
+        title: "Minecraft",
+        genre: "Sandbox",},
+]))
+
+function loadGames() {
+    const data = localStorage.getItem("games")
+    console.log(!data)
+    if (!data) {
+        return []
+    }
+    try {
+        return JSON.parse(data)
+    } catch (error) {
+        console.log("Ошибка при загрузке данных из localStorage:", error)
+        return [];
+    }
+}
+
+
+let b = loadGames()
+console.log(b)
+
+// Сайт -> делает запрос -> API -> сервер -> данные -> API -> сайт -> render() -> карточки на странице
+// https://jsonplaceholder.typicode.com/users
+
+const url = "https://jsonplaceholder.typicode.com/users"
+
+let users = []
+
+async function loadUsers() {
+    const response = await fetch(url)
+    let result = await response.json()
+    return result
+}
+async function main() {
+    let c = await loadUsers()
+
+    c.forEach((user) => {
+        users.push(user)
+    })
+    renderUsers()
+    console.log(users)
+}
+
+function renderUsers() {
+    const usersDiv = document.querySelector(`#users`)
+    users.forEach((user) => {
+        let a = document.createElement(`div`)
+        a.innerHTML = `
+        <h2>${user.name}</h2>
+        <h3>${user.email}</h3>
+        <h3>${user.phone}</h3>
+        `
+        usersDiv.append(a)
+    })
+}
+
+// let d = loadGames()
+// d.forEach((name) => {
+//     console.log(name.name)
+// })
+
+main()
