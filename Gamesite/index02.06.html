@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="style02.06.css">
 </head>
 <body>
+    <div id="users"></div>
     <button id="All">Все задачи</button>
     <button id="Study">Учёба</button>
     <button id="Home">Дом</button>
     <button id="Sport">Спорт</button>
     <button id="Important">Важные задачи</button>
     <div id="taskList"></div>
-    <form id="taskings" class="form">
+        <form id="taskings" class="form">
+        <label for="name">Задача:</label>
+        <input type="text" id="name" name="name">
+        <label for="category">Категория:</label>
         <select name="category" id="category">
             <option value="">Выберите категорию</option>
-            <option value="Study">Учёба</option>
-            <option value="Home">Дом</option>
-            <option value="Sport">Спорт</option>
+            <option value="study">Учёба</option>
+            <option value="home">Домашние дела</option>
+            <option value="sport">Спорт</option>
         </select>
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="names">
-        <label for="minute"> Время:</label>
+        <label for="minute">Время:</label>
         <input type="number" id="minute" name="minute">
-        <label for="importan">Важная задача:</label>
-        <input type="checkbox" name="importan">
-        <button type="submit">Добавить задачу</button>
+        <label for="important"></label>
+        Важная задача:
+        <input type="checkbox" id="important" value="yes">
+        <button type="submit">Создать задачу</button>
     </form>
+    <span id="ErrMsg"></span>
     <script src="script02.06.js"></script>
 </body>
 </html>
