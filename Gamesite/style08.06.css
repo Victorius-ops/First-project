@@ -1,0 +1,21 @@
+*{
+    margin: 2px;
+    padding: 6px;
+}
+.active{
+    background-color: red;
+}
+button{
+    background: greenyellow;
+    border-radius: 28px;
+}
+h1{
+    color: gold;
+}
+p{
+    color: burlywood;
+    background-color: whitesmoke;
+    border-radius: 40px;
+    width: fit-content;
+    font-weight: 600;
+}
