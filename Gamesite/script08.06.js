@@ -102,6 +102,10 @@ hard.onclick = () => {
     isHardMode = !isHardMode
     console.log(isHardMode)
     hard.classList.toggle(`active`)
+    result.textContent = `Включен сложный режим`
+    if(isHardMode === false) (
+        result.textContent = `Сложный режим отключен`
+    )
 }
 function startGame() {
 let timeCount = 10
