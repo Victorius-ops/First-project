@@ -154,3 +154,74 @@ function finishGame() {
 startBtn.addEventListener(`click`, () => {
     startGame()
 })
+
+const player1 = {
+    name: `Player1`,
+    hp: 100,
+    damage: 10,
+}
+
+const player2 = {
+    name: `Player2`,
+    hp: 100,
+    damage: 10,
+}
+
+const player3 = {
+    name: `Player3`,
+    hp: 100,
+    damage: 10,
+    function() {
+        console.log(`Удар!`)
+    }
+}
+
+class Player {
+    constructor(name, hp, damage) {
+        this.name = name
+        this.hp = hp
+        this.isAdmin = false
+        this.damage = damage
+    }
+
+    showInfo() {
+        console.log(`Имя: ${this.name} | HP: ${this.hp} | Админ: ${this.isAdmin} | Урон: ${this.damage}`)
+    }
+    getDamage(amount) {
+        this.hp -= amount
+        console.log(`Герой получил ${amount}. Здоровья осталось ${this.hp}`)
+    }
+    getHeal(amount) {
+        this.hp += amount
+        console.log(`Герой восстановил ${amount} здоровья.`)
+    }
+    combat(target) {
+        target.hp -= this.damage
+        console.log(`Игрок ${target.name}, вам был нанесён удар от игрока ${this.name}. \nГерой получил ${this.damage} урона. Здоровья осталось ${target.hp}`)
+    }
+}
+
+export const heroes = [
+    new Player("Akbar", 100, 28),
+    new Player(`Max`, 120, 32),
+    new Player(`John`, 80, 25),
+    new Player(`Sara`, 90, 22),
+    new Player(`Lara`, 110, 30),
+]
+heroes[0].showInfo()
+
+// const player11 = new Player("Akbar", 100, 28)
+// player11.level = 10
+// const player12 = new Player(`Max`, 120, 32)
+// console.log(player11.name, player11.hp, player11.level) 
+// console.log(player12.name, player12.hp, player12.level)
+// player11.showInfo()
+// player12.showInfo()
+// player11.getHeal(8)
+// player12.getHeal(14)
+// player11.showInfo()
+// player12.showInfo()
+// player11.combat(player12)
+// player12.combat(player11)
+// player11.showInfo()
+// player12.showInfo()

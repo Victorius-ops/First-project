@@ -120,3 +120,6 @@ inp.addEventListener(`keyup`, function(e) {
 // Для кнопки удалени нужно 
 // 1. найти все элементы на странице в переменной
 // 2. удалить переменную
+
+import {heroes} from "./script08.06.js"
+console.log(heroes)
