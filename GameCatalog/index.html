@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Каталог Игр</h1>
+    <div class="cardCreate">
+        <form class="addGame" action="">
+            Название:<input type="text">
+            Жанр:<input type="text">
+            Цена:<input type="text">
+            Платформа:<select name="Ptatforms" id="идентификатор">
+                    <option value="PC">PC</option>
+                    <option value="Console1">Xbox</option>
+                    <option value="Console2">Playstation</option>
+                    </select>
+            Рейтинг:<input type="number">
+            Год выхода:<input type="number">
+            Описание:<input type="text">
+            <button class="addBTN" type="submit">Добавьте игру</button>
+        </form>
+    </div>
+    <script type="module" src="data.js"></script>
+    <script type="module" src="Game.js"></script>
 </body>
 </html>

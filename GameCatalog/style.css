@@ -2,3 +2,33 @@
     margin: 0px;
     padding: 0px;
 }
+body{  background: skyblue;}
+.cardCreate{
+    background: violet;
+    border-radius: 28px;
+    padding: 12px;
+}
+.addGame{
+    display: grid;
+    grid-template-columns: repeat(4, 20vh);
+    grid-template-rows: repeat(4, 2vh);
+    gap: 14px;
+}
+.addGame > input{
+    border: 1px solid ;
+    border-radius: 20px;
+    padding: 8px; 
+    background: yellow;
+}
+.addGame > select{
+    border: 1px solid ;
+    border-radius: 20px;
+    padding: 1px;
+    background: yellow;
+}
+.addBTN{
+    grid-column: 3 /span 2;
+    border: 1px solid ;
+    border-radius: 20px;
+    background: yellow;
+}
