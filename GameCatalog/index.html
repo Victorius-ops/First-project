@@ -10,19 +10,35 @@
     <h1>Каталог Игр</h1>
     <div class="cardCreate">
         <form class="addGame" action="">
-            Название:<input type="text">
-            Жанр:<input type="text">
-            Цена:<input type="text">
-            Платформа:<select name="Ptatforms" id="идентификатор">
+            <span>Название:</span><input type="text">
+            <span>Жанр:</span><input type="text">
+            <span>Цена:</span><input type="text">
+            <span>Платформа:</span><select name="Ptatforms" id="идентификатор">
                     <option value="PC">PC</option>
                     <option value="Console1">Xbox</option>
                     <option value="Console2">Playstation</option>
                     </select>
-            Рейтинг:<input type="number">
-            Год выхода:<input type="number">
-            Описание:<input type="text">
+            <span>Рейтинг:</span><input type="number">
+            <span>Год выхода:</span><input type="number">
+            <span>Описание:</span><input type="text">
             <button class="addBTN" type="submit">Добавьте игру</button>
         </form>
+    </div>
+    <div class="searchGames">
+        <span>Найти игру</span>
+        <input type="text">
+    </div>
+    <div class="categoryFilter">
+        <button>Action</button>
+        <button>LiveSim</button>
+        <button>Race</button>
+        <button>Survivor</button>
+    </div>
+    <div class="greateFilter">   
+        Фильтр   
+    </div>
+    <div class="cardsArea">
+        Зона с карточками
     </div>
     <script type="module" src="data.js"></script>
     <script type="module" src="Game.js"></script>

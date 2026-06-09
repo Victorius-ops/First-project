@@ -4,13 +4,13 @@
 }
 body{  background: skyblue;}
 .cardCreate{
-    background: violet;
+    background: paleturquoise;
     border-radius: 28px;
     padding: 12px;
 }
 .addGame{
     display: grid;
-    grid-template-columns: repeat(4, 20vh);
+    grid-template-columns: min-content 20vh min-content 20vh;
     grid-template-rows: repeat(4, 2vh);
     gap: 14px;
 }
@@ -18,17 +18,23 @@ body{  background: skyblue;}
     border: 1px solid ;
     border-radius: 20px;
     padding: 8px; 
-    background: yellow;
+    background: seashell;
 }
 .addGame > select{
     border: 1px solid ;
     border-radius: 20px;
     padding: 1px;
-    background: yellow;
+    background: seashell;
 }
 .addBTN{
     grid-column: 3 /span 2;
     border: 1px solid ;
     border-radius: 20px;
-    background: yellow;
+    background: palegoldenrod;
+}
+.addGame > span{
+    color:forestgreen;
+    font-size: larger;
+    font-weight: 500;
+    font-style: oblique;
 }
