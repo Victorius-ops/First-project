@@ -10,23 +10,23 @@
     <h1>Каталог Игр</h1>
     <div class="cardCreate">
         <form class="addGame" action="">
-            <span>Название:</span><input type="text">
-            <span>Жанр:</span><input type="text">
-            <span>Цена:</span><input type="text">
-            <span>Платформа:</span><select name="Ptatforms" id="идентификатор">
+            <span>Название:</span><input type="text" placeholder="Assasins`creed 2">
+            <span>Жанр:</span><input type="text" placeholder="Actions">
+            <span>Цена:</span><input type="text" placeholder="400P">
+            <span>Платформа:</span><select title="Ptatforms" id="идентификатор">
                     <option value="PC">PC</option>
                     <option value="Console1">Xbox</option>
                     <option value="Console2">Playstation</option>
                     </select>
-            <span>Рейтинг:</span><input type="number">
-            <span>Год выхода:</span><input type="number">
-            <span>Описание:</span><input type="text">
+            <span>Рейтинг:</span><input type="number" placeholder="8.8">
+            <span>Год выхода:</span><input type="number" placeholder="2007">
+            <span>Описание:</span><input type="text" placeholder="-">
             <button class="addBTN" type="submit">Добавьте игру</button>
         </form>
     </div>
     <div class="searchGames">
         <span>Найти игру</span>
-        <input type="text">
+        <input type="text" placeholder="Укажите название">
     </div>
     <div class="categoryFilter">
         <button>Action</button>
@@ -36,11 +36,25 @@
     </div>
     <div class="greateFilter">   
         Фильтр   
+        Название<input type="text" placeholder="-">
+        Цена<input type="text" placeholder="-">
+        Рейтинг<input type="text" placeholder="-">
+        Год выхода<input type="text" placeholder="-">
     </div>
     <div class="cardsArea">
+        <button class="DelAll">Удалить все игры</button>
+        <button class="RestoreSTD">Восстановить стандартный список</button>
         Зона с карточками
+        Сделать в JS 2 тест карточки
     </div>
+    <div class="stats">Статитстика игр где показывается информация по текущим играм: сколько всего игр, сколько избранных, средняя цена, средний рейтинг</div>
+    <div class="API">
+        Запрос к API
+    </div>
+    <div class="rates">Блок с отзывами</div>
     <script type="module" src="data.js"></script>
     <script type="module" src="Game.js"></script>
+    <script type="module" src="UI.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
