@@ -15,3 +15,7 @@ export function addGammes(item) {
     `
     area.append(card)
 }
+export function deleteGames() {
+    const card = document.querySelector(`.cardsArea`) 
+    card.innerHTML = ``
+}
