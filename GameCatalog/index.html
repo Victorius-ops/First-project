@@ -9,18 +9,25 @@
 <body>
     <h1>Каталог Игр</h1>
     <div class="cardCreate">
-        <form class="addGame" action="">
-            <span>Название:</span><input type="text" placeholder="Assasins`creed 2">
-            <span>Жанр:</span><input type="text" placeholder="Actions">
-            <span>Цена:</span><input type="text" placeholder="400P">
-            <span>Платформа:</span><select title="Ptatforms" id="идентификатор">
-                    <option value="PC">PC</option>
-                    <option value="Console1">Xbox</option>
-                    <option value="Console2">Playstation</option>
+        <form class="addGame">
+            <label for="Name">Название:</label>
+            <input type="text" name="name" placeholder="Assasins`creed 2">
+            <label for="Genre">Жанр:</label>
+            <input type="text" name="genre" placeholder="Actions">
+            <label for="Price">Цена:</label>
+            <input type="number" name="price" placeholder="400P">
+            <label for="Platform">Платформа:</label>
+            <select title="Ptatforms" name="Ptatforms" id="идентификатор">
+                    <option value="PC" selected="selected">PC</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="PS">Playstation</option>
                     </select>
-            <span>Рейтинг:</span><input type="number" placeholder="8.8">
-            <span>Год выхода:</span><input type="number" placeholder="2007">
-            <span>Описание:</span><input type="text" placeholder="-">
+            <label for="Rating">Рейтинг:</label>
+            <input type="number" name="rating" placeholder="8.8">
+            <label for="Year">Год выхода:</label>
+            <input type="number" name="year" placeholder="2007">
+            <label for="Description">Описание:</label>
+            <input type="text"  name="description" placeholder="-">
             <button class="addBTN" type="submit">Добавьте игру</button>
         </form>
     </div>
