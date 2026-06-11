@@ -29,7 +29,7 @@ form.addEventListener(`submit`, (event) =>{
     const rating = form.elements.rating
     const year = form.elements.year
     const description = form.elements.description
-    if(name == `` || genre == `` || price == `` || rating == `` || year == `` || description == ``) {
+    if(name.value == `` || genre.value == `` || price.value == `` || rating.value == `` || year.value == `` || description.value == ``) {
         console.log(`Проверьте заполнененные данные`)
         return
     } else {
