@@ -20,28 +20,38 @@ Restor.addEventListener(`click`, () => {
 const form = document.querySelector(`.addGame`)
 let i = 3
 form.addEventListener(`submit`, (event) =>{
-    area.innerHTML = ``
     event.preventDefault()
-    const name = form.elements.name.value
-    const genre = form.elements.genre.value
-    const price = form.elements.price.value
+    const name = form.elements.name
+    const genre = form.elements.genre
+    const price = form.elements.price
     const platmorm = form.elements.Ptatforms
     const selectedOption = platmorm.options[platmorm.selectedIndex];
-    const rating = form.elements.rating.value
-    const year = form.elements.year.value
-    const description = form.elements.description.value
+    const rating = form.elements.rating
+    const year = form.elements.year
+    const description = form.elements.description
+    if(name == `` || genre == `` || price == `` || rating == `` || year == `` || description == ``) {
+        console.log(`Проверьте заполнененные данные`)
+        return
+    } else {
+    area.innerHTML = ``
     i++ 
     cardsMass.push({
         ID:i,
-        title:name,
-        genre:genre,
-        price:price,
+        title:name.value,
+        genre:genre.value,
+        price:price.value,
         platform:selectedOption.value,
-        rating:rating,
-        year:year,
-        description:description,
+        rating:rating.value,
+        year:year.value,
+        description:description.value,
         isFavorite:false
     })
+    name.value = ``
+    genre.value = ``
+    price.value = ``
+    rating.value = ``
+    year.value = ``
+    description.value = ``
     save
-    render(cardsMass)
+    render(cardsMass)}
 })
