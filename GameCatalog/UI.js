@@ -11,7 +11,7 @@ export function addGammes(item) {
     <h2>${item.description}</h2>
     ${item.isFavorite}
     <button>Добавить в избранное</button>
-    <button>Удалить игру</button>
+    <button class="DeleteGame">Удалить игру</button>
     `
     area.append(card)
     

@@ -1,9 +1,13 @@
 import { cardsMass } from "./data.js";
 import { addGammes } from "./UI.js";
-import { save } from "./storage.js";
+import { storage } from "./storage.js";
 let area = document.querySelector(`.cardsArea`)
-function render() {cardsMass.forEach(addGammes)}
-render()
+const ALLCARDS = cardsMass
+console.log(ALLCARDS)
+const VisibleCards = JSON.parse(localStorage.getItem(`Mass`))
+console.log(VisibleCards)
+function render(Cards) {Cards.forEach(addGammes)}
+render(VisibleCards)
 let state = `ALL`
 import { deleteGames } from "./UI.js";
 let deleteAll = document.querySelector(`.DelAll`)
@@ -15,10 +19,13 @@ let Restor = document.querySelector(`.RestoreSTD`)
 Restor.addEventListener(`click`, () => {
     state = `STDGames`
     area.innerHTML = ``
-    render()
+    render(cardsMass)
 })
 const form = document.querySelector(`.addGame`)
-let i = 3
+const targetObject  = VisibleCards.at(-1)
+const message = document.querySelector(`.MSG`)
+let i = targetObject.ID
+console.log(i)
 form.addEventListener(`submit`, (event) =>{
     event.preventDefault()
     const name = form.elements.name
@@ -29,13 +36,13 @@ form.addEventListener(`submit`, (event) =>{
     const rating = form.elements.rating
     const year = form.elements.year
     const description = form.elements.description
-    if(name.value == `` || genre.value == `` || price.value == `` || rating.value == `` || year.value == `` || description.value == ``) {
+    if(name.value == `` || genre.value == `` || price.value == `` || price.value < 0|| rating.value == `` || rating.value < 0 || rating.value > 10  || year.value == `` || year.value < 1980 || description.value == ``) {
         console.log(`Проверьте заполнененные данные`)
         return
     } else {
     area.innerHTML = ``
     i++ 
-    cardsMass.push({
+    ALLCARDS.push({
         ID:i,
         title:name.value,
         genre:genre.value,
@@ -52,6 +59,19 @@ form.addEventListener(`submit`, (event) =>{
     rating.value = ``
     year.value = ``
     description.value = ``
-    save
-    render(cardsMass)}
+    storage(ALLCARDS)
+    render(VisibleCards)
+    message.innerHTML = `Игра добавлена`
+    setTimeout(() => {
+        message.innerHTML = ``
+    }, 5000)
+    }
 })
+    let AllBTNDEL = document.querySelectorAll(`.DeleteGame`)
+    AllBTNDEL.forEach (BTNDEL => {
+        BTNDEL.addEventListener(`click`, () => {
+            area.innerHTML = ``
+            // render(VisibleCards)
+        })
+    })
+      

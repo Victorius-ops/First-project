@@ -38,3 +38,17 @@ body{  background: skyblue;}
     font-weight: 500;
     font-style: oblique;
 }
+.cardsArea{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 14px;
+}
+.card{
+    /* display: flex;
+    flex-direction: column; */
+    background: darkorchid;
+    width: fit-content;
+    padding: 14px;
+    border: 4px solid red;
+    border-radius: 28px;
+}
