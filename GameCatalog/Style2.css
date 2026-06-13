@@ -1,0 +1,37 @@
+:root {
+  --bg: #0b1020;
+  --card: #141a32;
+  --text: #e8eaf6;
+  --muted: #a5b4d8;
+  --primary: #4f8cff;
+  --secondary: #7c5cff;
+  --accent: #22c55e;
+  --border: rgba(255,255,255,.1);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Inter, system-ui, Arial; background: radial-gradient(circle at 20% -10%, rgba(79,140,255,.15), transparent 40%), radial-gradient(circle at 100% 0%, rgba(124,92,255,.15), transparent 40%), var(--bg); color: var(--text); }
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr; gap: 16px; }
+.card { background: linear-gradient(180deg, rgba(20,26,50,.95), rgba(20,26,50,.85)); border: 1px solid var(--border); border-radius: 12px; padding: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+.card h2 { margin: 0 0 12px; font-size: 1.25rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.form-section .add-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 8px; }
+.label, input, select, textarea { width: 100%; }
+.input, input, textarea, select { padding: 8px; border-radius: 6px; border: 1px solid var(--border); background: #0e1440; color: var(--text); }
+.btn { border: none; padding: 10px 14px; border-radius: 6px; cursor: pointer; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-secondary { background: #2b2f4f; color: white; }
+.btn-warning { background: #e11d48; color: white; }
+.btn-success { background: #16a34a; color: white; }
+.clock { font-family: monospace; padding: 6px 10px; border-radius: 6px; background: rgba(0,0,0,.25); }
+.gallery-section .item { display: block; border: 1px solid var(--border); border-radius: 8px; padding: 10px; background: #0f173a; margin-bottom: 8px; }
+.item h3 { margin: 0 0 6px; font-size: 1rem; }
+.meta { font-size: .85rem; color: var(--muted); }
+.empty { text-align: center; padding: 20px; color: var(--muted); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-btn { padding: 6px 10px; border-radius: 999px; border: 1px solid var(--border); background: #1b1f44; color: #e8eaff; cursor: pointer; }
+.filter-btn.active { background: var(--accent); border-color: transparent; color: white; }
+.stat { display: inline-block; margin-right: 12px; }
+.timer-display { font-family: monospace; font-size: 1.4rem; padding: 6px 12px; background: rgba(0,0,0,.25); border-radius: 6px; display: inline-block; }
+@media (max-width: 700px) {
+  .form-section .row { grid-template-columns: 1fr; }
+}

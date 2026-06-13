@@ -1,32 +1,32 @@
 import { cardsMass } from "./data.js";
 import { addGammes } from "./UI.js";
 import { storage } from "./storage.js";
-let area = document.querySelector(`.cardsArea`)
-const ALLCARDS = cardsMass
-console.log(ALLCARDS)
-const VisibleCards = JSON.parse(localStorage.getItem(`Mass`))
-console.log(VisibleCards)
-function render(Cards) {Cards.forEach(addGammes)}
-render(VisibleCards)
-let state = `ALL`
+import { Outmass } from "./storage.js";
 import { deleteGames } from "./UI.js";
-let deleteAll = document.querySelector(`.DelAll`)
+import { Restor } from "./storage.js";
+import { area } from "./storage.js";
+import { deleteAll } from "./storage.js";
+// localStorage.setItem(`Mass`, JSON.stringify(cardsMass))
+let state = `ALL`
+export function render(Cards) {Cards.forEach(addGammes)}
+render(Outmass)
 deleteAll.addEventListener(`click`, () => {
     state = `ALLDelete`
     cardsMass.forEach(deleteGames)
 })
-let Restor = document.querySelector(`.RestoreSTD`)
 Restor.addEventListener(`click`, () => {
+    storage(cardsMass)
     state = `STDGames`
     area.innerHTML = ``
     render(cardsMass)
 })
 const form = document.querySelector(`.addGame`)
-const targetObject  = VisibleCards.at(-1)
+const targetObject  = Outmass.at(-1)
 const message = document.querySelector(`.MSG`)
 let i = targetObject.ID
 console.log(i)
 form.addEventListener(`submit`, (event) =>{
+    i++ 
     event.preventDefault()
     const name = form.elements.name
     const genre = form.elements.genre
@@ -41,16 +41,15 @@ form.addEventListener(`submit`, (event) =>{
         return
     } else {
     area.innerHTML = ``
-    i++ 
-    ALLCARDS.push({
+    Outmass.push({
         ID:i,
         title:name.value,
         genre:genre.value,
         price:price.value,
         platform:selectedOption.value,
         rating:rating.value,
-        year:year.value,
-        description:description.value,
+        release_date:year.value,
+        short_description:description.value,
         isFavorite:false
     })
     name.value = ``
@@ -59,9 +58,10 @@ form.addEventListener(`submit`, (event) =>{
     rating.value = ``
     year.value = ``
     description.value = ``
-    storage(ALLCARDS)
-    render(VisibleCards)
-    message.innerHTML = `Игра добавлена`
+    storage(Outmass)
+    // const VisibleCards = JSON.parse(localStorage.getItem(`Mass`))
+    render(Outmass)
+    message.innerHTML = ` <h3> Игра добавлена</h3>`
     setTimeout(() => {
         message.innerHTML = ``
     }, 5000)

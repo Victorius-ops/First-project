@@ -6,8 +6,8 @@ export class Game {
         this.price = price;
         this.platform = platform;
         this.rating = rating;
-        this.year = year;
-        this.description = description;
+        this.release_date = year;
+        this.short_description = description;
         this.isFavorite = isFavorite;
     }
 }

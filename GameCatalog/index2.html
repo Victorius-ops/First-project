@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог игр</title>
+  <link rel="stylesheet" href="Style2.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Заголовок проекта: Каталог игр</h1>
+    <div id="clock" class="clock" aria-label="Таймер времени на сайте"></div>
+  </header>
+
+  <main class="container">
+    <!-- Блок 2: Форма добавления новой игры -->
+    <section class="card form-section">
+      <h2>Добавить новую игру</h2>
+      <form id="addGameForm" autocomplete="off">
+        <div class="row">
+          <label>Название
+            <input type="text" name="title" required placeholder="Название игры" />
+          </label>
+          <label>Цена (USD)
+            <input type="number" name="price" step="0.01" min="0" required placeholder="Цена" />
+          </label>
+        </div>
+        <div class="row">
+          <label>Жанр
+            <select name="genre" required>
+              <option value="">Выберите жанр</option>
+              <option>Action</option>
+              <option>Adventure</option>
+              <option>RPG</option>
+              <option>Strategy</option>
+              <option>Shooter</option>
+              <option>Indie</option>
+            </select>
+          </label>
+          <label>Год выхода
+            <input type="number" name="year" min="1970" max="2100" required placeholder="Год" />
+          </label>
+        </div>
+        <div class="row">
+          <label>Рейтинг
+            <input type="number" name="rating" min="0" max="10" step="0.1" required placeholder="0-10" />
+          </label>
+          <label>Описание
+            <textarea name="description" rows="2" placeholder="Краткое описание"></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить игру</button>
+      </form>
+    </section>
+
+    <!-- Блок 3: Поиск игры по названию -->
+    <section class="card search-section">
+      <h2>Поиск по названию</h2>
+      <input id="searchInput" type="text" placeholder="Введите название для поиска" aria-label="Поиск по названию" />
+    </section>
+
+    <!-- Блок 4: Фильтры по жанрам -->
+    <section class="card filter-section" aria-label="Фильтры по жанрам">
+      <h2>Фильтры по жанрам</h2>
+      <div class="filters" id="genreFilters"></div>
+    </section>
+
+    <!-- Блок 5: Сортировка -->
+    <section class="card sort-section" aria-label="Сортировка">
+      <h2>Сортировка</h2>
+      <select id="sortSelect" aria-label="Сортировка по полю">
+        <option value="title-asc">Название (А→Я)</option>
+        <option value="title-desc">Название (Я→А)</option>
+        <option value="price-asc">Цена (возрастание)</option>
+        <option value="price-desc">Цена (убывание)</option>
+        <option value="rating-desc">Рейтинг (убывание)</option>
+        <option value="year-desc">Год выхода (возрастание)</option>
+      </select>
+    </section>
+
+    <!-- Блок 6: Контейнер карточек игр -->
+    <section class="card gallery-section" aria-label="Контейнер карточек игр">
+      <h2>Каталог игр</h2>
+      <div id="gamesContainer" class="grid"></div>
+      <div id="emptyState" class="empty" hidden>Каталог пуст. Добавьте игры или загрузите из API.</div>
+    </section>
+
+    <!-- Блок 7: Блок статистики каталога -->
+    <section class="card stats-section" aria-label="Статистика каталога">
+      <h2>Статистика каталога</h2>
+      <ul id="statsList">
+        <li>Всего игр: <strong id="statCount">0</strong></li>
+        <li>Средняя цена: <strong id="statAvgPrice">0</strong> USD</li>
+        <li>Средний рейтинг: <strong id="statAvgRating">0</strong> / 10</li>
+      </ul>
+    </section>
+
+    <!-- Блок 8: Загрузка из внешнего API -->
+    <section class="card api-section" aria-label="Загрузка из внешнего API">
+      <h2>Загрузка из внешнего API</h2>
+      <button id="loadFromApi" class="btn btn-secondary">Загрузить игры из API</button>
+      <div id="apiStatus" class="status" aria-live="polite"></div>
+    </section>
+
+    <!-- Блок 9: Отзывы или доп. инфо через fetch -->
+    <section class="card reviews-section" aria-label="Отзывы и дополнительная информация">
+      <h2>Отзывы / Дополнительная информация</h2>
+      <div id="externalInfo" class="external-info">Загрузка...</div>
+      <button id="reloadExternal" class="btn btn-secondary" title="Обновить данные">Обновить</button>
+    </section>
+
+    <!-- Блок 10: Таймер времени на сайте -->
+    <section class="card timer-section" aria-label="Таймер на сайте">
+      <h2>Вы онлайн:</h2>
+      <div id="siteTimer" class="Timer">00:00:00</div>
+    </section>
+
+    <!-- Блок 11: Очистка каталога -->
+    <section class="card actions-section" aria-label="Действия">
+      <h2>Действия</h2>
+      <button id="clearCatalog" class="btn btn-warning">Очистить каталог</button>
+      <button id="restoreDefaults" class="btn btn-success">Восстановить стандартные игры</button>
+    </section>
+  </main>
+
+  <script src="app2.js"></script>
+</body>
+</html>
+
