@@ -8,7 +8,9 @@ import { area } from "./storage.js";
 import { deleteAll } from "./storage.js";
 // localStorage.setItem(`Mass`, JSON.stringify(cardsMass))
 let state = `ALL`
-export function render(Cards) {Cards.forEach(addGammes)}
+export function render(Cards) {
+    area.innerHTML = ``
+    Cards.forEach(addGammes)}
 render(Outmass)
 deleteAll.addEventListener(`click`, () => {
     state = `ALLDelete`
@@ -26,7 +28,7 @@ const message = document.querySelector(`.MSG`)
 let i = targetObject.ID
 console.log(i)
 form.addEventListener(`submit`, (event) =>{
-    i++ 
+    i++
     event.preventDefault()
     const name = form.elements.name
     const genre = form.elements.genre
@@ -59,7 +61,6 @@ form.addEventListener(`submit`, (event) =>{
     year.value = ``
     description.value = ``
     storage(Outmass)
-    // const VisibleCards = JSON.parse(localStorage.getItem(`Mass`))
     render(Outmass)
     message.innerHTML = ` <h3> Игра добавлена</h3>`
     setTimeout(() => {
@@ -71,7 +72,6 @@ form.addEventListener(`submit`, (event) =>{
     AllBTNDEL.forEach (BTNDEL => {
         BTNDEL.addEventListener(`click`, () => {
             area.innerHTML = ``
-            // render(VisibleCards)
         })
     })
       

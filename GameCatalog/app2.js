@@ -219,7 +219,7 @@
   // Удаление и избранное (делегирование)
   container.addEventListener('click', (e) => {
     if (e.target && e.target.classList.contains('delete-btn')) {
-      const id = parseInt(e.target.dataset.id, 10);
+      const id =    (e.target.dataset.id, 10);
       if (Number.isFinite(id)) {
         // удалить из массива и сохранить
         games = games.filter(g => g.id !== id);

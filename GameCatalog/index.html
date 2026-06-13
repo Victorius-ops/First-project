@@ -36,10 +36,10 @@
         <input type="text" placeholder="Укажите название">
     </div>
     <div class="categoryFilter">
-        <button>Action</button>
-        <button>LiveSim</button>
-        <button>Race</button>
-        <button>Survivor</button>
+        <button id="Action">Action</button>
+        <button id="LiveSim">LiveSim</button>
+        <button id="Race">Race</button>
+        <button id="Survivor">Survivor</button>
     </div>
     <div class="greateFilter">   
         Фильтр   
@@ -58,7 +58,11 @@
     <div class="API">
         <button class="fetch">Запрос к API</button> 
     </div>
-    <div class="rates">Блок с отзывами</div>
+    <div class="rates">
+       <div>Отзывы</div> 
+       <button class="reloadExternal">Обновить</button>
+       <div class="reload"></div>
+    </div>
     <div class="timer">  
         <h2>
             <span class="Timer">Вы просматриваете сайт: 00:00:00</span>

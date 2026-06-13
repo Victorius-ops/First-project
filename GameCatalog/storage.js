@@ -13,3 +13,13 @@ export let Timer = document.querySelector(`.Timer`)
 export const Restor = document.querySelector(`.RestoreSTD`)
 export const area = document.querySelector(`.cardsArea`)
 export const deleteAll = document.querySelector(`.DelAll`)
+export const rates = document.querySelector(`.rates`)
+export const reload = document.querySelector(`.reload`)
+export const reloadExternal = document.querySelector(`.reloadExternal`)
+export const ActionBTN = document.querySelector(`#Action`)
+export const LiveSimBTN = document.querySelector(`#LiveSim`)
+export const RaceBTN = document.querySelector(`#Race`)
+export const SurvivorBTN = document.querySelector(`#Survivor`)
+export const Card = document.querySelectorAll(`.card`)
+
+
