@@ -1,5 +1,12 @@
 
-function Card() {
-  return <p>4,5,6</p>;
+function Card({ title, price, rating, id }) {
+  return (
+    <div className="back">
+      <h2>{title}</h2>
+      <p>{price}</p>
+      <p>{rating}</p>
+    </div>
+  )
 }
-export default Card;
+
+export default Card
