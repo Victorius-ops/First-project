@@ -1,0 +1,44 @@
+.FilmCard{
+  background: crimson;
+  color: black;
+  flex-basis: calc(33.33% - 10px);
+  border-radius: 46px;
+  box-shadow: 8px 8px 18px red;
+  padding: 12px;
+}
+.FilmMain{
+  display: flex;
+  flex-wrap: wrap;    
+  gap: 10px;   
+}
+.Спокойный{
+  background: green;
+  border-radius: 28px;
+  border: 2px solid green;
+  color: white;
+  width: fit-content;
+}
+.Радостный{
+  background: blueviolet;
+  border-radius: 28px;
+  border: 2px solid blueviolet;
+  color: white;
+  width: fit-content;
+
+}
+.Спит{
+  background: blue;
+  border-radius: 28px;
+  border: 2px solid blue;
+  color: white;
+  width: fit-content;
+
+}
+.Отдохнувший{
+  background: red;
+  border-radius: 28px;
+  border: 2px solid red;
+  color: white;
+  width: fit-content;
+
+}
