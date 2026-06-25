@@ -1,6 +1,7 @@
 import './App.css'
 import Film from './Film.jsx'
 import Pet from './Pet.jsx'
+import FilmAdd from './FilmAdd.jsx'
 function App() {
 // const films = [
 //   {
@@ -71,7 +72,8 @@ function App() {
       })
     }
     </div> */}
-    <Pet/>
+    {/* <Pet/> */}
+    <FilmAdd />
     </>
   )
 }

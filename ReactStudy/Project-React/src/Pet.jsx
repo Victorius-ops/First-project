@@ -1,10 +1,10 @@
 import { useState } from "react"
 function Pet () {
-    const name = `Барсик`
+    const[name, setName] = useState("Барсик")
     const[hungry, setHungry] = useState(5)
     const[energy, setEnergy] = useState(5)
     const[mood, setMood] = useState(`Спокойный`)
-    const[isSleeping, setisSleeping] = useState(false)
+    const[isSleeping, setIsSleeping] = useState(false)
     const[message, setMessage] = useState(`Выбери действие`)
     const[show, setShow] = useState(false)
     const[image, setImage] = useState(`https://img.magnific.com/free-photo/beautiful-cat-portrait-close-up_23-2149152103.jpg?semt=ais_hybrid&w=740&q=80`)
@@ -30,7 +30,7 @@ function Pet () {
         }
     }
     function sleep() {
-        setisSleeping(true)
+        setIsSleeping(true)
         setMood(`Спит`)
         setMessage(`Питомец уснул`)
         setImage(`https://i.pinimg.com/736x/67/12/25/671225ca634638262d4a2580accd7a37.jpg`)
@@ -44,7 +44,7 @@ function Pet () {
             return
         }
         else{
-        setisSleeping(false)
+        setIsSleeping(false)
         setEnergy(energy + 2)
         setMood(`Отдохнувший`)
         setMessage(`Питомец проснулся`)
@@ -56,7 +56,7 @@ function Pet () {
         setHungry(5)
         setEnergy(5)
         setMood(`Спокойный`)
-        setisSleeping(false)
+        setIsSleeping(false)
         setMessage(`Выбери действие`)
         setImage(`https://img.magnific.com/free-photo/beautiful-cat-portrait-close-up_23-2149152103.jpg?semt=ais_hybrid&w=740&q=80`)
         setAlt(`Спокойный кот`)
@@ -78,7 +78,7 @@ function Pet () {
             <button onClick={start}>«Сбросить»</button>
             <button onClick={showMSG}>«Показать подсказку»</button>
         </div>
-       {show == true && <div> <p className = {mood}>{message}</p><img src={image} alt={alt} /></div>}
+       { show && <div> <p className = {mood}>{message}</p><img src={image} alt={alt} /></div>}
         </>
     )
 }

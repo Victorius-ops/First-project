@@ -42,3 +42,12 @@
   width: fit-content;
 
 }
+button{
+  color: red;
+  margin: 6px;
+  font-size: medium;
+  font-weight: 400;
+  background: plum;
+  border-radius: 28px;
+  padding: 2px;
+}
