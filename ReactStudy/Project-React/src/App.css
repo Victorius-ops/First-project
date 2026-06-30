@@ -1,15 +1,36 @@
 .FilmCard{
   background: crimson;
-  color: black;
+  color: gold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
   flex-basis: calc(33.33% - 10px);
   border-radius: 46px;
   box-shadow: 8px 8px 18px red;
   padding: 12px;
+  width: 14vh;
+  height: fit-content;
 }
+.high-rating{
+  background: gold;
+  color: crimson;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  flex-basis: calc(33.33% - 10px);
+  border-radius: 46px;
+  box-shadow: 8px 8px 18px goldenrod;
+  padding: 12px;
+  width: 14vh;
+  height: fit-content;
+}
+
 .FilmMain{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;    
   gap: 10px;   
+}
+.search-container{
+  margin: 10px;
 }
 .Спокойный{
   background: green;
@@ -43,11 +64,37 @@
 
 }
 button{
-  color: red;
+  color: white;
   margin: 6px;
   font-size: medium;
   font-weight: 400;
-  background: plum;
+  background: rgb(2, 4, 160);
+  border-radius: 28px;
+  padding: 6px;
+}
+.Info{
+  color: white;
+  font-weight: 20;
+  background: cornflowerblue;
   border-radius: 28px;
   padding: 2px;
+}
+
+.GoTo{
+  background: ghostwhite;
+}
+.clear{
+text-decoration: none;
+color: green;
+font-weight: 600;
+}
+body{
+  background: antiquewhite;
+}
+input{
+  background: whitesmoke;
+  padding: 8px;
+  border-radius: 34px;
+  margin: 6px;
+  color: red;
 }
