@@ -12,6 +12,9 @@ import PreMain from './pages/PreMain.jsx'
 import About from './pages/About.jsx'
 import Contacts from './pages/Contacts.jsx'
 import UsersList from './pages/Users.jsx'
+import UsersDetails from './components/UsersDetails.jsx'
+import Posts from './pages/Posts.jsx'
+import PostDetails from './components/PostDetails.jsx'
 function App() {
   return (
     <>
@@ -22,6 +25,10 @@ function App() {
         <Route path='/Contacts' element={<Contacts />} />
         <Route path='*' element={<PreMain />} />
         <Route path='/Users' element={<UsersList />} />
+        <Route path='/Users/:userId' element={<UsersDetails />} />
+        <Route path='/Posts' element={<Posts />} />
+        {/* <Route path='/PostDetails' element={<PostDetails />} /> */}
+        <Route path='/Posts/:postId' element={<PostDetails />} />
       </Routes>
     </>
   )

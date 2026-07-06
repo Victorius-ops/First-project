@@ -98,3 +98,21 @@ input{
   margin: 6px;
   color: red;
 }
+.userCard{
+  background: yellowgreen;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  flex-basis: calc(33.33% - 10px);
+  border-radius: 46px;
+  box-shadow: 2px 4px 10px yellow;
+  padding: 12px;
+  width: min-content;
+  margin: 12px;
+  height: fit-content;
+  transition: all 3s;
+}
+.userCard:hover{
+  color: white;
+  box-shadow: 16px 14px 20px yellow;
+}

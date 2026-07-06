@@ -16,6 +16,9 @@ function PreMain() {
         <div className="UserList">
             <button className="GoTo"><Link to= "/Users" className="clear">Пользователи сервиса</Link></button>
         </div>
+        <div className="PostsList">
+            <button className="GoTo"><Link to= "/Posts" className="clear"> Посты</Link></button>
+        </div>
         </>
     )
 }

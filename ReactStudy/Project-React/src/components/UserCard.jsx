@@ -1,12 +1,13 @@
-function userCard(id) {
+import { Link } from "react-router-dom"
+
+function UserCard({id, name, city, mail}) {
     return(
         <>
-        <div key={id}>
-            <h3>Имя пользователя</h3>
-            <h4>Город</h4>
-            <h5>Email</h5>
-        </div>
+            <h3>Имя: {name}</h3>
+            <h4>Город: {city}</h4>
+            <h5>Email: {mail}</h5>
+            <Link to={`/Users/${id}`}>Подробнее</Link>
         </>
     )
 }
-export default userCard
+export default UserCard

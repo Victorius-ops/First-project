@@ -75,6 +75,7 @@ function Home() {
         const  response = await axios.get("https://jsonplaceholder.typicode.com/users")
         setUsers(response.data)
         setIsLoad(false) 
+        console.log(users)
         } catch (error) {
           setError("Не удалось загрузить пользователей")
         } finally {
