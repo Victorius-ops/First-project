@@ -1,6 +1,7 @@
 import { Link, useParams, useNavigate } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import axios from "axios"
+import { UserContext } from "../Context/UserContext"
 
 function UserDetails() {
     const { userId } = useParams()
@@ -9,7 +10,9 @@ function UserDetails() {
     const [isLoad, setIsLoad] = useState(true)
     const [error, setError] = useState("")
     const [catchError, setCatchError] = useState(false)
-    
+    const test = useContext(UserContext)
+    console.log(`Наш контекст: ${test.users}`)
+
     useEffect(() => {
       async function loadUsers() {
         try {
@@ -30,6 +33,7 @@ function UserDetails() {
     return (
         <>
             <h3>Загрузка...</h3>
+            <button onClick={() => test.addUser()}>asd</button>
             <Link to="/Users">Назад</Link>
         </>
     )
@@ -39,6 +43,7 @@ function UserDetails() {
     return (
     <>
         <h3>Пользователь не найден</h3>
+        <button onClick={() => test.addUser()}>asd</button>
         <Link to="/Users">Назад</Link>
     </>
     )

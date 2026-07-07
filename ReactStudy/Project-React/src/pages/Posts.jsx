@@ -32,16 +32,26 @@ function Posts() {
               <h2>{error}</h2>
             </div>
           )}
+        {/* {
+          isLoad ? (<h2>Загрузка постов... </h2>) : (post.map((value, index, array) => (
+            <div key={post.id} className="userCard">
+              <PostInfo 
+              userId = {post.id}
+              num = {post.id}
+              title = {post.title}/>
+            </div>
+          )))
+        } */}
         {isLoad ? (<h2>Загрузка постов... </h2>) : 
         (
-            post.map(post => (
+          post.map(post => (
           <div key={post.id} className="userCard">
               <PostInfo 
               userId = {post.id}
               num = {post.id}
               title = {post.title}/>
           </div>
-            ))
+          ))
         // <PostInfo/>
     )}
         </>

@@ -2,9 +2,9 @@ import { Link,  useParams, useNavigate } from "react-router-dom"
 import axios from "axios"
 import { useState, useEffect } from "react"
 function PostDetails() {
-    const { searchId } = useParams()
+    const { userId } = useParams()
     const navigate = useNavigate()
-    const [post, setPost] = useState(null)
+    const [posts, setPostsId] = useState(null)
     const [isLoad, setIsLoad] = useState(true)
     const [error, setError] = useState("")
     const [catchError, setCatchError] = useState(false)
@@ -14,7 +14,7 @@ function PostDetails() {
         try {
             setIsLoad(true)
             const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${userId}`)
-            setPost(response.data)
+            setPostsId(response.data)
         } catch (error) {
           setError("Не удалось загрузить посты")
           setCatchError(true)
@@ -25,7 +25,7 @@ function PostDetails() {
       loadUsers()
   }, [])
 
-    if (isLoad) {
+if (isLoad === true) {
     return (
         <>
             <h3>Загрузка...</h3>
@@ -34,7 +34,7 @@ function PostDetails() {
     )
   }
 
-  if(!post) {
+  if(!posts) {
     return (
     <>
         <h3>Пользователь не найден</h3>
@@ -57,7 +57,7 @@ function PostDetails() {
             <p>Phone {user.phone}</p>
             <p>Website {user.website}</p>
             <p>Company {user.company.name}</p> */}
-            <h2>{post.body}</h2>
+            <h2>{posts.body}</h2>
             <Link to="/Users">Назад</Link>
         </>
     )
