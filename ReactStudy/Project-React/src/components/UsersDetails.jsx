@@ -6,28 +6,41 @@ import { UserContext } from "../Context/UserContext"
 function UserDetails() {
     const { userId } = useParams()
     const navigate = useNavigate()
+    // const [user, setUser] = useState(null)
+    // const [isLoad, setIsLoad] = useState(true)
+    // const [error, setError] = useState("")
+    // const [catchError, setCatchError] = useState(false)
     const [user, setUser] = useState(null)
-    const [isLoad, setIsLoad] = useState(true)
-    const [error, setError] = useState("")
-    const [catchError, setCatchError] = useState(false)
-    const test = useContext(UserContext)
-    console.log(`Наш контекст: ${test.users}`)
-
-    useEffect(() => {
-      async function loadUsers() {
-        try {
-            setIsLoad(true)
-            const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`)
+    const {isLoad, error} = useContext(UserContext) 
+    // const oneUser = ``
+       useEffect(() => {
+         async function loadUsers() {
+          try {
+            const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`) 
+            console.log(response.data)
             setUser(response.data)
-        } catch (error) {
-          setError("Не удалось загрузить список пользователей")
-          setCatchError(true)
-        } finally {
-          setIsLoad(false)
-        }
-      }
-      loadUsers()
-  }, [])
+          } catch (error) {
+            console.log(error)
+          }
+         } 
+         loadUsers()
+       },[])
+       
+  //   useEffect(() => {
+  //     async function loadUsers() {
+  //       try {
+  //           setIsLoad(true)
+            // const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`)
+  //           setUser(response.data)
+  //       } catch (error) {
+  //         setError("Не удалось загрузить список пользователей")
+  //         setCatchError(true)
+  //       } finally {
+  //         setIsLoad(false)
+  //       }
+  //     }
+  //     loadUsers()
+  // }, [])
 
   if (isLoad) {
     return (
@@ -39,7 +52,7 @@ function UserDetails() {
     )
   }
 
-  if(!user) {
+  if(user === null) {
     return (
     <>
         <h3>Пользователь не найден</h3>

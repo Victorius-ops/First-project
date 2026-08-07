@@ -58,7 +58,7 @@ if (isLoad === true) {
             <p>Website {user.website}</p>
             <p>Company {user.company.name}</p> */}
             <h2>{posts.body}</h2>
-            <Link to="/Users">Назад</Link>
+            <Link to="/Posts">Назад</Link>
         </>
     )
 }

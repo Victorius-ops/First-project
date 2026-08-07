@@ -4,14 +4,28 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import UserProvider from './Context/UserContext.jsx'
+import PostsProvider from './Context/PostContext.jsx'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
+const queryClient = new QueryClient()
+
+// QueryClient
+// |-----кэш
+//         |----["products"] - массив товаров
+//         |----["product", 1] - товар №1
+//         |----["product", 2] - товар №2
+//         |----["users"] - массив пользователей
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>   
+        <PostsProvider>
+          <UserProvider>
+            <App />
+          </UserProvider>
+        </PostsProvider>
+      </BrowserRouter>
+    </QueryClientProvider>
   </StrictMode>,
 )
