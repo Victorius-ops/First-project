@@ -8,7 +8,6 @@ import TunsTack from "./tunsstack";
 function Contacts() {
     const carts = useCartStore((store) => store.carts)
     const addToCart = useCartStore((store) => store.addToCart)
-    
     function ProductsComponent() {
         const {
             data: products,

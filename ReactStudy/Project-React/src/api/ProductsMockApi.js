@@ -2,7 +2,7 @@ import { NewApi } from "./apiClient"
 
 export async function getMockProducts() {
     const response = await NewApi.get(`/Products`)
-    return response.data.products
+    return response.data
 }
 export async function postProducts(params) {
     const response = await NewApi.post(`/Products` , params)
