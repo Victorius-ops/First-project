@@ -15,7 +15,7 @@ const queryClient = new QueryClient()
 //         |----["product", 1] - товар №1
 //         |----["product", 2] - товар №2
 //         |----["users"] - массив пользователей
-
+window.__TANSTACK_QUERY_CLIENT__ = queryClient
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>

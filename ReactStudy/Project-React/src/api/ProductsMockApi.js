@@ -13,3 +13,11 @@ export async function updateProducts(id, update) {
 export async function deleteProducts(id) {
     const response = await NewApi.delete(`/Products/${id}`)
 }
+export async function getProducts(search) {
+    const response = await NewApi.get("/Products", {
+        params: { title: search }
+    })
+    return response.data
+}
+// getProducts("Interstellar")
+// https://6a73ed3915e0453fe1b43f97.mockapi.io/Products?title=Interstellar
