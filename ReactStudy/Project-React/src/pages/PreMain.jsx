@@ -3,16 +3,7 @@ import Home from "./Home"
 import { useUsersFavFilms } from "../data/useUsersFavFilms"
 import { useRef, useState } from "react"
 import Regestration from "../components/Regestration"
-import { useQueries, useQuery } from "@tanstack/react-query"
-import { getAnimeMovies } from "../api/AnimeApi"
 function PreMain() {
-    const [page, setPage] = useState(1)
-    
-    const animeQueru = useQuery({
-        queryKey: ['animes', {page, limit: 10}],
-        queryFn: () => getAnimeMovies({page, limit: 10}),
-        staleTime: 30 * 1000
-    })
     const [count, setCount] = useState(0)
 
     let isReg = useUsersFavFilms((store) => store.isReg)
@@ -49,17 +40,11 @@ function PreMain() {
         <div className="PostsList">
             <button className="GoTo"><Link to= "/Posts" className="clear"> Посты</Link></button>
         </div>
+         <div className="PostsList">
+            <button className="GoTo"><Link to= "/Types" className="clear"> TypeScript</Link></button>
+        </div>
         <button onClick={() => change()}>Сменить пользователя</button>     
        </>)}
-        <button 
-        disabled = {page === 1}
-        onClick={() => setPage(page - 1)}>
-        Назад 
-        </button>
-        {page}
-        <button onClick={() => setPage(page + 1)}>
-        Вперёд 
-        </button>
         </>
     )
 }

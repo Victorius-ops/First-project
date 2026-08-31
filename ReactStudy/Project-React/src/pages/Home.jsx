@@ -4,6 +4,7 @@ import FilmForm from "../components/FilmForm"
 import { data, Link } from "react-router-dom"
 import FilmSearch from "../components/FilmSearch"
 import axios from "axios"
+import AnimeList from "../components/AnimeList"
 
 function Home() {
       // const films = [
@@ -183,6 +184,9 @@ const [searchQuery, setSearchQuery] = useState("");
             <h2>Всего фильмов в каталоге: {count}</h2>
             <div>
               <FilmForm onAddFilm={addFilm} films={films} />
+            </div>
+            <div>
+              <AnimeList />
             </div>
         </>
     )

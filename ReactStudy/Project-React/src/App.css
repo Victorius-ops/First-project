@@ -116,3 +116,10 @@ input{
   color: white;
   box-shadow: 16px 14px 20px yellow;
 }
+.AnimeApi{
+  background-color: white;
+  border-radius: 40px;
+  padding: 8px;
+  margin: 20px;
+  text-align: center;
+} 

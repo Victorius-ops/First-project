@@ -6,7 +6,9 @@ export const useUsersFavFilms= create(devtools(
     persist(
         (set) =>({
             Anime: [],
-
+            addAnimeList(arg) {
+                Anime = [...Anime, arg]
+            }
         }),
         {
             name:"AnimeList"

@@ -15,6 +15,7 @@ import UsersList from './pages/Users.jsx'
 import UsersDetails from './components/UsersDetails.jsx'
 import Posts from './pages/Posts.jsx'
 import PostDetails from './components/PostDetails.jsx'
+import TSTry from './types/TSTry.js'
 function App() {
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
         <Route path='/Posts' element={<Posts />} />
         {/* <Route path='/PostDetails' element={<PostDetails />} /> */}
         <Route path='/Posts/:userId' element={<PostDetails />} />
+        <Route path='/Types' element={<TSTry />} />
       </Routes>
     </>
   )

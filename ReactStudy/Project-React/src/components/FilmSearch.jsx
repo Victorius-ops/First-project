@@ -47,6 +47,7 @@ function FilmSearch({value, UserInput}) {
                 onChange={(e) => UserInput(e.target.value)}
              />
         </div>
+        
         </>
     )
 }
